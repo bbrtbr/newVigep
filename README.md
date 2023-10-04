@@ -62,9 +62,14 @@ sail npm run build
 ```bash
 sail npm run dev
 ```
-12. Acesse o dashboard padrão do sbadmin2 através do link: http://localhost
 
-13. Acesso o banco de dados atraves do link: http://localhost:8080/ , com as credenciais:
+12. No terminal execute a seeder para criar primeiro usuário Super Admin
+```bash
+sail php artisan db:seed --class=DatabaseSeeder
+```
+13. Acesse o dashboard padrão do sbadmin2 através do link: http://localhost
+
+14. Acesso o banco de dados atraves do link: http://localhost:8080/ , com as credenciais:
     1.  DB_HOST=mysql
     2.  DB_USERNAME=sail
     3.  DB_PASSWORD=password
