@@ -14,7 +14,7 @@ git clone https://github.com/holding-eficiencia/projeto-base.git
 ```
 2. Entre no repositorio clonado
 ```bash
-cd central/
+cd projeto-base/
 ```
 3. Crie o arquivo .env
 ```bash
@@ -63,7 +63,7 @@ sail npm run build
 sail npm run dev
 ```
 
-12. No terminal execute a seeder para criar primeiro usuário Super Admin
+12. No terminal execute a seeder para criar primeiro usuário com perfil Super Admin
 ```bash
 sail php artisan db:seed --class=DatabaseSeeder
 ```
