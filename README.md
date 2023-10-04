@@ -33,7 +33,7 @@ docker run --rm \
 ```bash
 sudo nano .bashrc
 ```
-Adicionar essa linha ao arquivo e salvá-lo:
+Adicionar essa linha ao arquivo e salve:
 ```bash
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
