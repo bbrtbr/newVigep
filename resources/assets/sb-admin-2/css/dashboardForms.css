@@ -1,0 +1,15 @@
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;/* Para que os botões quebrem para a próxima linha quando não couberem mais na largura da tela */
+    justify-content: center;
+}
+
+.btn {
+    margin: 5px;/* Espaçamento entre os botões */
+}
+
+.text-center {
+    text-align: center;
+    /* Centraliza horizontalmente o texto */
+}
