@@ -46,68 +46,67 @@
         <p style="text-align: center;">FICHA DE INVESTIGAÇÃO <strong>- @yield('typeNotification')</strong></p>
         <div class="container">
             <fieldset>
-                <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
-                <br>
-                <div class="form-group">
-                    <label for="Tipo de Notificação">1 - Tipo de Notificação</label>
-                    <input type="text" name="Tipo de Notificação" id="typeNotificationInput" class="form-control">
+            <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
+    <br>
+    <div class="form-group">
+        <label for="case_type">1 - Tipo de Notificação</label>
+        <input type="text" name="case_type" id="typeNotificationInput" class="form-control">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="case_disease">2 - Agravo/Doença</label>
+            <input value="@yield('typeNotification')" type="text" name="case_disease" id="case_disease" class="form-control">
+        </div>
 
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="Agravo/Doença">2 - Agravo/Doença</label>
-                        <input value="@yield('typeNotification')" type="text" name="Agravo/Doençao" id="Agravo/Doença" class="form-control""></div>
+        <div class="form-group col-md-3">
+            <label for="case_cid">Código (CID)</label>
+            <input type="text" value="@yield('codCidNotification')" name="case_cid" id="case_cid" class="form-control">
+        </div>
 
-                    <div class=" form-group col-md-3">
-                        <label for="Código (CID)">Código (CID)</label>
-                        <input type="text" value="@yield('codCidNotification')" name="Código (CID)" id="Código (CID)" class="form-control">
-                    </div>
+        <div class="form-group col-md-3">
+            <label for="case_notification_date">3 - Data de Notificação</label>
+            <input type="date" name="case_notification_date" id="case_notification_date" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-1">
+            <label for="ufNotification">4 - UF</label>
+            <select id="ufNotification" name="uf" class="form-control" onchange="fetchCities()">
+                <option value="">Selecione um estado</option>
+            </select>
+        </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="Data de Notificação">3 - Data de Notificação</label>
-                        <input type="date" name="Data de Notificação" id="Data de Notificação" class="form-control">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-1">
-                        <label for="UF">4 - UF</label>
-                        <select id="ufNotification" class="form-control" onchange="fetchCities()">
-                            <option value="">Selecione um estado</option>
-                        </select>
-                    </div>
+        <div class="form-group col-md-8">
+            <label for="cityNotification">5 - Município de Notificação</label>
+            <select name="city" class="form-control" id="cityNotification">
+                <option value="">Selecione um estado primeiro</option>
+            </select>
+        </div>
 
-                    <div class="form-group col-md-8">
-                        <label for="Município de Notificação">5 - Município de Notificação</label>
-                        <select class="form-control" id="cityNotification">
-                            <option value="">Selecione um estado primeiro</option>
-                        </select>
-                    </div>
+        <div class="form-group col-md-3">
+            <label for="ibgeCode">Código (IBGE)</label>
+            <input type="text" name="ibge_code" id="ibgeCode" class="form-control">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="notifyingSource">6 - Unidade de Saúde (ou outra fonte notificadora)</label>
+            <input id="notifyingSource" list="suggestionUnidSaude" name="notifying_source" class="form-control">
+            <datalist id="suggestionUnidSaude"></datalist>
+        </div>
 
-                    <div class="form-group col-md-3">
-                        <label for="Código (IBGE)">Código (IBGE)</label>
-                        <input type="text" name="Código (IBGE)" id="Código (IBGE)" class="form-control">
-                    </div>
+        <div class="form-group col-md-3">
+            <label for="unitCode">Código</label>
+            <input type="text" id="unitCode" name="unit_code" class="form-control">
+        </div>
 
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="Unidade de Saúde (ou outra fonte notificadora)">6 - Unidade de Saúde (ou outra fonte notificadora)</label>
-                        <input id='unidSaude' list='sugestionUnidSaude' type="text" name="Unidade de Saúde (ou outra fonte notificadora)" class="form-control">
-                        <datalist id="sugestionUnidSaude"></datalist>
-
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Código">Código</label>
-                        <input type="text" id="codUnidSaude" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Data dos Primeiros Sintomas">7 - Data dos Primeiros Sintomas</label>
-                        <input type="date" name="Data dos Primeiros Sintomas" id="Data dos Primeiros Sintomas" class="form-control">
-                    </div>
+        <div class="form-group col-md-3">
+            <label for="firstSymptomsDate">7 - Data dos Primeiros Sintomas</label>
+            <input type="date" name="first_symptoms_date" id="firstSymptomsDate" class="form-control">
+        </div>
             </fieldset>
 
+            
         </div>
         <hr>
         <div class="container">

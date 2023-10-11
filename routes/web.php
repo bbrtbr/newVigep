@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ACL\RoleController;
 use App\Http\Controllers\ACL\PermissionController;
 use App\Http\Controllers\FormsController;
+use App\Http\Controllers\Forms\rabiesCasesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
 
     /** Formulários */
     Route::get('/forms', [FormsController::class, 'forms']);
-    Route::get('forms/antirabico', [FormsController::class, 'antirabico']);
+    Route::get('forms/antirabico', [rabiesCasesController::class, 'index']);
 });
 
 require __DIR__ . '/auth.php';

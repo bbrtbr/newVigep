@@ -2,10 +2,12 @@
 @section('title','ANTI-RÁBICO')
 @section('typeNotification','ANTI-RÁBICO HUMANO')
 @section('codCidNotification','W - 64')
+
 @section('content')
 
 <div class="container">
     <fieldset>
+
         <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
         <br>
         <form class="form-inline">
@@ -223,7 +225,7 @@
                 </div>
             </div>
 
-        </form>
+
     </fieldset>
 </div>
 <hr>
@@ -499,6 +501,7 @@
 <hr>
 <div style="display: flex; justify-content: center;">
     <input type="submit" value="Enviar" class="btn btn-primary">
+    </form>
 </div>
 <br>
 @endsection
