@@ -2,7 +2,7 @@
 @section('title','ANTI-RÁBICO')
 @section('typeNotification','ANTI-RÁBICO HUMANO')
 @section('codCidNotification','W - 64')
-<form method="POST" action="vigep/forms">
+<form method="POST" action="{{ route('vigep.store.rabiescases') }}">
     @csrf
 @section('content')
 

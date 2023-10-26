@@ -16,7 +16,7 @@ class rabiesCasesController extends Controller
     }
     public function store(Request $request)
     {   
-        $patients = new Patients();
+        
         $HealthUnits = HealthUnits::create($request->all());
         $patients = Patients::create($request->all());
         $cases = ModelsCases::create($request->all());
@@ -25,6 +25,7 @@ class rabiesCasesController extends Controller
         $addresses->save();
 
         $adressesID = $addresses->address_id;
+
         $patients->get_address_id = $adressesID;
         $patients->save();
         $patientID = $patients->patient_id;
@@ -35,14 +36,14 @@ class rabiesCasesController extends Controller
 
         $cases->get_health_unit_id =  $HealthID;
         $cases->get_patient_id = $patientID;
+        $cases->get_address_id = $adressesID;
         $cases->save();
         $caseID = $cases->case_id;
 
         $RabiesCases->get_case_id = $caseID;
         $RabiesCases->save();
        
-     
-        
+        return redirect('/');
     }
     public function verifyCPF(Request $request) {
         $cpf = $request->input('patient_cpf');

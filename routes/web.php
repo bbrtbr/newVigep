@@ -46,7 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/forms', [FormsController::class, 'forms']);
     
     Route::get('vigep/forms/antirabico', [rabiesCasesController::class, 'index']);
-    Route::post('vigep/forms', [RabiesCasesController::class, 'store']);
+    Route::post('vigep/forms', [RabiesCasesController::class, 'store'])->name('vigep.store.rabiescases');
     Route::get('vigep/verifyCPF', [RabiesCasesController::class, 'verifyCPF']);
 
 });
