@@ -36,283 +36,274 @@
 
     <h1 style="text-align: center;">SINAN</h1>
     <p style="text-align: center;">SISTEMA DE INFORMAÇÃO DE AGRAVOS DE NOTIFICAÇÃO</p>
-    <form action="cad.php" method="get">
-        <div class="container">
-            <div class="form-group col-md-3">
-                <input type="number" name="N°" id="N°" class="form-control" placeholder="N°" style="background-color: rgb(212, 209, 214);">
+    <div class="container">
+        <div class="form-group col-md-3">
+            <input type="number" name="N°" id="N°" class="form-control" placeholder="N°" style="background-color: rgb(212, 209, 214);">
+        </div>
+
+    </div>
+    <p style="text-align: center;">FICHA DE INVESTIGAÇÃO <strong>- @yield('typeNotification')</strong></p>
+    <div class="container">
+        <fieldset>
+            <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
+            <br>
+            <div class="form-group">
+                <label for="case_type">1 - Tipo de Notificação</label>
+                <input type="text" id="case_type" class="form-control">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="case_disease">2 - Agravo/Doença</label>
+                    <input value="@yield('typeNotification')" type="text" name="case_disease" id="case_disease" class="form-control">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="case_cid">Código (CID)</label>
+                    <input type="text" value="@yield('codCidNotification')" name="case_cid" id="case_cid" class="form-control">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="case_notification_date">3 - Data de Notificação</label>
+                    <input type="date" name="case_notification_date" id="case_notification_date" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                    <label for="address_uf">4 - UF</label>
+                    <select id="address_uf" name="address_uf" class="form-control" onchange="fetchCities()">
+                        <option value="">Selecione um estado</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="address_municipality">5 - Município de Notificação</label>
+                    <select name="address_municipality" class="form-control" id="address_municipality">
+                        <option value="">Selecione um estado primeiro</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="address_ibge_code">Código (IBGE)</label>
+                    <input type="text" name="address_ibge_code" id="address_ibge_code" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="health_unit_name">6 - Unidade de Saúde (ou outra fonte notificadora)</label>
+                    <input id="health_unit_name" list="suggestionUnidSaude" name="health_unit_name" class="form-control">
+                    <datalist id="suggestionUnidSaude"></datalist>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="unitCode">Código</label>
+                    <input type="text" id="health_unit_code" name="health_unit_code" class="form-control">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="firstSymptomsDate">7 - Data dos Primeiros Sintomas</label>
+                    <input type="date" name="first_symptoms_date" id="firstSymptomsDate" class="form-control">
+                </div>
+        </fieldset>
+
+
+    </div>
+    <hr>
+    <div class="container">
+        <fieldset>
+            <legend style="text-align: center;"><strong>Notificação Individual</strong></legend>
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="patient_cpf">CPF</label>
+                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control">
+
+                </div>
+                <div class="form-group col-md-9">
+                    <label for="patient_name">8 - Nome do Paciente</label>
+                    <input type="text" name="patient_name" id="patient_name" class="form-control">
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="patient_birthday">9 - Data de Nascimento</label>
+                    <input type="date" name='patient_birthday' id="patient_birthday" class="form-control">
+                </div>
             </div>
 
-        </div>
-        <p style="text-align: center;">FICHA DE INVESTIGAÇÃO <strong>- @yield('typeNotification')</strong></p>
-        <div class="container">
-            <fieldset>
-            <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
-    <br>
-    <div class="form-group">
-        <label for="case_type">1 - Tipo de Notificação</label>
-        <input type="text" name="case_type" id="typeNotificationInput" class="form-control">
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="case_disease">2 - Agravo/Doença</label>
-            <input value="@yield('typeNotification')" type="text" name="case_disease" id="case_disease" class="form-control">
-        </div>
-
-        <div class="form-group col-md-3">
-            <label for="case_cid">Código (CID)</label>
-            <input type="text" value="@yield('codCidNotification')" name="case_cid" id="case_cid" class="form-control">
-        </div>
-
-        <div class="form-group col-md-3">
-            <label for="case_notification_date">3 - Data de Notificação</label>
-            <input type="date" name="case_notification_date" id="case_notification_date" class="form-control">
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-1">
-            <label for="ufNotification">4 - UF</label>
-            <select id="ufNotification" name="uf" class="form-control" onchange="fetchCities()">
-                <option value="">Selecione um estado</option>
-            </select>
-        </div>
-
-        <div class="form-group col-md-8">
-            <label for="cityNotification">5 - Município de Notificação</label>
-            <select name="city" class="form-control" id="cityNotification">
-                <option value="">Selecione um estado primeiro</option>
-            </select>
-        </div>
-
-        <div class="form-group col-md-3">
-            <label for="ibgeCode">Código (IBGE)</label>
-            <input type="text" name="ibge_code" id="ibgeCode" class="form-control">
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="notifyingSource">6 - Unidade de Saúde (ou outra fonte notificadora)</label>
-            <input id="notifyingSource" list="suggestionUnidSaude" name="notifying_source" class="form-control">
-            <datalist id="suggestionUnidSaude"></datalist>
-        </div>
-
-        <div class="form-group col-md-3">
-            <label for="unitCode">Código</label>
-            <input type="text" id="unitCode" name="unit_code" class="form-control">
-        </div>
-
-        <div class="form-group col-md-3">
-            <label for="firstSymptomsDate">7 - Data dos Primeiros Sintomas</label>
-            <input type="date" name="first_symptoms_date" id="firstSymptomsDate" class="form-control">
-        </div>
-            </fieldset>
-
-            
-        </div>
-        <hr>
-        <div class="container">
-            <fieldset>
-                <legend style="text-align: center;"><strong>Notificação Individual</strong></legend>
-                <br>
-                <div class="form-row">
-
-                    <div class="form-group col-md-9">
-                        <label for="nome_do_paciente">8 - Nome do Paciente</label>
-                        <input type="text" name="nome_do_paciente" id="nome_do_paciente" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="data_de_nascimento">9 - Data de Nascimento</label>
-                        <input type="date" id="birthDate" class="form-control">
-                    </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="patient_age">10 - (ou) Idade</label>
+                    <input type="text" name="patient_age" id="patient_age" class="form-control" readonly>
                 </div>
 
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label for="age">10 - (ou) Idade</label>
-                        <input type="text" id="age" class="form-control" readonly>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="sexo">11 - Sexo</label>
-                        <select name="sexo" id="sexo" class="form-control">
-                            <option selected>Escolher...</option>
-                            <option>M - Masculino</option>
-                            <option>F - Feminino</option>
-                            <option>I - Ignorado</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Gestante">12 - Gestante</label>
-                        <select name="Gestante" id="Gestante" class="form-control">
-                            <option selected>Escolher...</option>
-                            <option>1 - 1° Trimestre</option>
-                            <option>2 - 2° Trimestre</option>
-                            <option>3 - 3° Trimestre</option>
-                            <option>4 - Idade Gestacional Ignorada</option>
-                            <option>5 - Não</option>
-                            <option>6 - Não se aplica</option>
-                            <option>9 - Ignorado</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Raça/Cor">13 - Raça/Cor</label>
-                        <select name="Raça/Cor" id="Raça/Cor" class="form-control">
-                            <option selected>Escolher...</option>
-                            <option>1 - Branca</option>
-                            <option>2 - Preta</option>
-                            <option>3 - Amarela</option>
-                            <option>4 - Parda</option>
-                            <option>5 - Indígena</option>
-                            <option>9 - Ignorada</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <div class="form-group">
-                    <label for="Escolaridade">14 - Escolaridade</label>
-                    <select name="Escolaridade" id="Escolaridade" class="form-control">
+                <div class="form-group col-md-3">
+                    <label for="patient_sex">11 - Sexo</label>
+                    <select name="patient_sex" id="patient_sex" class="form-control">
                         <option selected>Escolher...</option>
-                        <option>0 - Analfabeto</option>
-                        <option>1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)</option>
-                        <option>2 - 4ª série completa do EF (antigo primário ou 1º grau)</option>
-                        <option>3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º grau)</option>
-                        <option>4 - Ensino fundamental completo (antigo ginásio ou 1º grau)</option>
-                        <option>5 - Ensino médio incompleto (antigo colegial ou 2º grau)</option>
-                        <option>6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
-                        <option>7 - Educação superior incompleta</option>
-                        <option>8 - Educação superior completa</option>
-                        <option>9 - Ignorado</option>
-                        <option>10 - Não se aplica</option>
-
+                        <option>M - Masculino</option>
+                        <option>F - Feminino</option>
+                        <option>I - Ignorado</option>
                     </select>
-
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="numero_do_cartao_sus">15 - Número do Cartão SUS</label>
-                        <input type="text" name="numero_do_cartao_sus" id="numero_do_cartao_sus" class="form-control">
-                    </div>
 
-                    <div class="form-group col-md-8">
-                        <label for="Nome da mãe">16 - Nome da mãe</label>
-                        <input type="text" name="Nome da mãe" id="Nome da mãe" class="form-control">
-                    </div>
-
+                <div class="form-group col-md-3">
+                    <label for="patient_pregnant">12 - Gestante</label>
+                    <select name="patient_pregnant" id="patient_pregnant" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>1 - 1° Trimestre</option>
+                        <option>2 - 2° Trimestre</option>
+                        <option>3 - 3° Trimestre</option>
+                        <option>4 - Idade Gestacional Ignorada</option>
+                        <option>5 - Não</option>
+                        <option>6 - Não se aplica</option>
+                        <option>9 - Ignorado</option>
+                    </select>
                 </div>
-        </div>
+
+                <div class="form-group col-md-3">
+                    <label for="patient_race">13 - Raça/Cor</label>
+                    <select name="patient_race" id="patient_race" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>1 - Branca</option>
+                        <option>2 - Preta</option>
+                        <option>3 - Amarela</option>
+                        <option>4 - Parda</option>
+                        <option>5 - Indígena</option>
+                        <option>9 - Ignorada</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="patient_education">14 - Escolaridade</label>
+                <select name="patient_education" id="patient_education" class="form-control">
+                    <option selected>Escolher...</option>
+                    <option>0 - Analfabeto</option>
+                    <option>1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)</option>
+                    <option>2 - 4ª série completa do EF (antigo primário ou 1º grau)</option>
+                    <option>3 - 5ª à 8ª série incompleta do EF (antigo ginásio ou 1º grau)</option>
+                    <option>4 - Ensino fundamental completo (antigo ginásio ou 1º grau)</option>
+                    <option>5 - Ensino médio incompleto (antigo colegial ou 2º grau)</option>
+                    <option>6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
+                    <option>7 - Educação superior incompleta</option>
+                    <option>8 - Educação superior completa</option>
+                    <option>9 - Ignorado</option>
+                    <option>10 - Não se aplica</option>
+
+                </select>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="patient_cns">15 - Número do Cartão SUS</label>
+                    <input type="number" name="patient_cns" id="patient_cns" class="form-control">
+                </div>
+
+                <div class="form-group col-md-8">
+                    <label for="patient_mother_name">16 - Nome da mãe</label>
+                    <input type="text" name="patient_mother_name" id="patient_mother_name" class="form-control">
+                </div>
+
+
+            </div>
+    </div>
+    </fieldset>
+    </div>
+    <hr>
+    <div class="container">
+        <fieldset>
+            <legend style="text-align: center;"><strong>Dados de Residência</strong></legend>
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-1">
+                    <label for="patient_uf">17 - UF</label>
+                    <input type="text" name="patient_uf" id="patient_uf" class="form-control">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="patient_municipality">18 - Município de Residência</label>
+                    <input type="text" name="patient_municipality" id="patient_municipality" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="patient_ibge_code">Código (IBGE)</label>
+                    <input type="text" name="patient_ibge_code" id="patient_ibge_code" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="patient_district">19 - Distrito</label>
+                    <input type="text" name="patient_district" id="patient_district" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="patient_neighborhood">20 - Bairro</label>
+                    <input type="text" name="patient_neighborhood" id="patient_neighborhood" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="patient_address">21 - Logradouro</label>
+                    <input type="text" name="patient_address" id="patient_address" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="patient_address_code">Código</label>
+                    <input type="text" name="patient_address_code" id="patient_address_code" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="patient_address_number">22 - Número</label>
+                    <input type="text" name="patient_address_number" id="patient_address_number" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="patient_address_complement">23 - Complemento</label>
+                    <input type="text" name="patient_address_complement" id="patient_address_complement" class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="patient_geofield1">24 - Geo campo 1</label>
+                    <input type="text" name="patient_geofield1" id="patient_geofield1" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="patient_geofield2">25 - Geo campo 2</label>
+                    <input type="text" name="patient_geofield2" id="patient_geofield2" class="form-control">
+                </div>
+                <div class="form-group col-md-5">
+                    <label for="patient_address_reference">26 - Ponto de Referência</label>
+                    <input type="text" name="patient_address_reference" id="patient_address_reference" class="form-control">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="patient_cep">27 - CEP</label>
+                    <input type="text" name="patient_cep" id="patient_cep" class="form-control">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="patient_phone">28 - (DDD) Telefone</label>
+                    <input onkeyup="formatPhoneNumber(this)" type="text" name="patient_phone" id="patient_phone" class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="patient_zone">29 - Zona</label>
+                    <select name="patient_zone" id="patient_zone" class="form-control">
+                        <option selected>Escolher...</option>
+                        <option>1 - Urbana</option>
+                        <option>2 - Rural</option>
+                        <option>3 - Periurbana</option>
+                        <option>9 - Ignorado</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="patient_country">30 - País (se residente fora do Brasil)</label>
+                    <input type="text" name="patient_country" id="patient_country" class="form-control">
+                </div>
+            </div>
         </fieldset>
-        </div>
-        <hr>
-        <div class="container">
-            <fieldset>
-                <legend style="text-align: center;"><strong>Dados de Residência</strong></legend>
-                <br>
-                <div class="form-row">
-                    <div class="form-group col-md-1">
-                        <label for="UF_DR">17 - UF</label>
-                        <input type="text" name="UF_DR" id="UF_DR" class="form-control""></div>
+    </div>
 
-                    <div class=" form-group col-md-5">
-                        <label for="Município de Residência">18 - Município de Residência</label>
-                        <input type="text" name="Município de Residência" id="Município de Residência" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Código (IBGE)_DR">Código (IBGE)</label>
-                        <input type="text" name="Código (IBGE)_DR" id="Código (IBGE)_DR" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Distrito">19 - Distrito</label>
-                        <input type="text" name="Distrito" id="Distrito" class="form-control">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-3">
-                        <label for="Bairro">20 - Bairro</label>
-                        <input type="text" name="Bairro" id="Bairro" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="Logradouro">21 - Logradouro</label>
-                        <input type="text" name="Logradouro" id="address" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="Código_DR">Código</label>
-                        <input type="text" name="Código_DR" id="Código_DR" class="form-control">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-2">
-                        <label for="Número">22 - Número</label>
-                        <input type="text" name="Número" id="Número" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="Complemento">23 - Complemento</label>
-                        <input type="text" name="Complemento" id="Complemento" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="Geo campo 1">24 - Geo campo 1</label>
-                        <input type="text" name="Geo campo 1" id="Geo campo 1" class="form-control">
-                    </div>
-
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="Geo campo 2">25 - Geo campo 2</label>
-                        <input type="text" name="Geo campo 2" id="Geo campo 2" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-5">
-                        <label for="Ponto de Referência">26 - Ponto de Referência</label>
-                        <input type="text" name="Ponto de Referência" id="Ponto de Referência" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-3">
-                        <label for="CEP">27 - CEP</label>
-                        <input type="text" name="CEP" id="CEP" class="form-control">
-                    </div>
-
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="(DDD) Telefone">28 - (DDD) Telefone</label>
-                        <input type="text" id="numberPhone" onkeyup="formatPhoneNumber(this)" class="form-control">
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="Zona">29 - Zona</label>
-                        <select name="Zona" id="Zona" class="form-control">
-                            <option selected>Escolher...</option>
-                            <option>1 - Urbana</option>
-                            <option>2 - Rural</option>
-                            <option>3 - Periurbana</option>
-                            <option>9 - Ignorado</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="País">30 - País (se residente fora do Brasil)</label>
-                        <input type="text" name="País" id="País" class="form-control">
-                    </div>
-
-                </div>
-            </fieldset>
-        </div>
-        @yield('content')
+    @yield('content')
 </body>
 <script src="{{ asset('js/scriptForms/getCodeSugestion.js') }}"></script>
 <script src="{{ asset('js/scriptForms/getAge.js') }}"></script>
 <script src="{{ asset('js/scriptForms/getCityStateNotification.js') }}"></script>
 <script src="{{ asset('js/scriptForms/formatNumberPhone.js') }}"></script>
+<script src="{{ asset('js/scriptForms/formatNumberCPF.js') }}"></script>
+<script src="{{ asset('js/scriptForms/verifyPacient.js') }}"></script>
 
 </html>

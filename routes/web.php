@@ -42,9 +42,13 @@ Route::middleware('auth')->group(function () {
     Route::get('permissions/load', [PermissionController::class, 'loadDataTable'])->name('permissions.load');
     Route::resource('permissions', PermissionController::class);
 
-    /** Formulários */
-    Route::get('/forms', [FormsController::class, 'forms']);
-    Route::get('forms/antirabico', [rabiesCasesController::class, 'index']);
+    /** Formulários - VIGEP */
+    Route::get('vigep/forms', [FormsController::class, 'forms']);
+    
+    Route::get('vigep/forms/antirabico', [rabiesCasesController::class, 'index']);
+    Route::post('vigep/forms', [RabiesCasesController::class, 'store']);
+    Route::get('vigep/verifyCPF', [RabiesCasesController::class, 'verifyCPF']);
+
 });
 
 require __DIR__ . '/auth.php';

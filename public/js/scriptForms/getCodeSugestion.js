@@ -1,6 +1,6 @@
-var field = document.getElementById('unidSaude');
-var suggestion = document.getElementById('sugestionUnidSaude');
-var codUnidSaude = document.getElementById('codUnidSaude');
+var field = document.getElementById('health_unit_name');
+var suggestion = document.getElementById('suggestionUnidSaude');
+var codUnidSaude = document.getElementById('health_unit_code');
 var vetorSugestoes = [
     {"name": "UBS SITIO TAQUARI JUNCO", "code": "5462762"},
     {"name": "CENTRO DE ZOONOSES DE JUAZEIRO DO NORTE", "code": "7808542"},

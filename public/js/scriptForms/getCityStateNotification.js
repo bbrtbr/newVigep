@@ -1,5 +1,5 @@
-const stateSelect = document.getElementById('ufNotification');
-const citySelect = document.getElementById('cityNotification');
+const stateSelect = document.getElementById('address_uf');
+const citySelect = document.getElementById('address_municipality');
 
 
 async function fetchStates() {

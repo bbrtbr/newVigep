@@ -2,12 +2,12 @@
 @section('title','ANTI-RÁBICO')
 @section('typeNotification','ANTI-RÁBICO HUMANO')
 @section('codCidNotification','W - 64')
-
+<form method="POST" action="vigep/forms">
+    @csrf
 @section('content')
 
 <div class="container">
     <fieldset>
-
         <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
         <br>
         <form class="form-inline">
