@@ -1,6 +1,6 @@
 const stateSelect = document.getElementById('address_uf');
 const citySelect = document.getElementById('address_municipality');
-
+const cityIBGECode = document.getElementById('address_ibge_code');
 
 async function fetchStates() {
     const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
@@ -35,9 +35,14 @@ async function fetchCities() {
         const option = document.createElement('option');
         option.value = city.id;
         option.textContent = city.nome;
+        
         citySelect.appendChild(option);
+
     });
 }
-
+citySelect.addEventListener('change', function () {
+    const selectedCityId = citySelect.value;
+    cityIBGECode.value = selectedCityId;
+});
 
 fetchStates();
