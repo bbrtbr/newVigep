@@ -1,1 +1,1 @@
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+alias sail='[ -f sail ] && sh sail || sh ./vendor/bin/sail'

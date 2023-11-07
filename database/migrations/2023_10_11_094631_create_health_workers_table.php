@@ -11,6 +11,7 @@ class CreateHealthWorkersTable extends Migration
         Schema::create('health_workers', function (Blueprint $table) {
             $table->id('health_worker_id');
             $table->string('health_worker_name', 255)->nullable();
+            $table->string('health_worker_registration', 255)->nullable(); 
             $table->string('health_worker_function', 255)->nullable();
             $table->timestamps();
         });

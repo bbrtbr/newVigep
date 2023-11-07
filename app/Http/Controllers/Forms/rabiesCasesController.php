@@ -5,45 +5,45 @@ namespace App\Http\Controllers\Forms;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cases as ModelsCases;
-use App\Models\Patients, App\Models\Addresses, App\Models\RabiesCases, App\Models\HealthUnits;
+use App\Models\Patients, App\Models\Addresses, App\Models\RabiesCases, App\Models\HealthUnits, App\Models\HealthWorkers;
 
 class rabiesCasesController extends Controller
 {
     public function index()
     {
 
-        return view('forms.antirabico');
+        return view('vigep.forms.antirabico');
     }
+
     public function store(Request $request)
     {   
-        
-        $HealthUnits = HealthUnits::create($request->all());
-        $patients = Patients::create($request->all());
-        $cases = ModelsCases::create($request->all());
         $addresses = Addresses::create($request->all());
-        $RabiesCases = RabiesCases::create($request->all());
-        $addresses->save();
 
-        $adressesID = $addresses->address_id;
+        $patientData = $request->all();
+    $patient = Patients::updateOrcreate(
+        ['patient_cpf' => $patientData['patient_cpf']],
+        $patientData
+    );
+    $patient->get_address_id = $addresses->address_id;
+    $patient->save();
+    
 
-        $patients->get_address_id = $adressesID;
-        $patients->save();
-        $patientID = $patients->patient_id;
+    $healthUnit = HealthUnits::create($request->all());
 
-        $HealthUnits->save();
-        $HealthID = $HealthUnits->health_unit_id;
+    $healthWorker = HealthWorkers::create($request->all());
 
+    $case = ModelsCases::create($request->all());
+    $case->get_health_unit_id = $healthUnit->health_unit_id;
+    $case->get_patient_id = $patient->patient_id;
+    $case->get_address_id = $addresses->address_id;
+    $case->get_patient_id = $patient->patient_id;
+    $case->save();
 
-        $cases->get_health_unit_id =  $HealthID;
-        $cases->get_patient_id = $patientID;
-        $cases->get_address_id = $adressesID;
-        $cases->save();
-        $caseID = $cases->case_id;
+    $rabiesCase = RabiesCases::create($request->all());
+    $rabiesCase->get_case_id = $case->case_id;
+    $rabiesCase->save();
 
-        $RabiesCases->get_case_id = $caseID;
-        $RabiesCases->save();
-       
-        return redirect('/');
+    return redirect('/');
     }
     public function verifyCPF(Request $request) {
         $cpf = $request->input('patient_cpf');

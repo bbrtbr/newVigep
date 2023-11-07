@@ -216,72 +216,72 @@
             <br>
             <div class="form-row">
                 <div class="form-group col-md-1">
-                    <label for="patient_uf">17 - UF</label>
-                    <input type="text" name="patient_uf" id="patient_uf" class="form-control">
+                    <label for="address_uf">17 - UF</label>
+                    <input type="text" name="address_uf" id="address_uf" class="form-control">
                 </div>
                 <div class="form-group col-md-5">
-                    <label for="patient_municipality">18 - Município de Residência</label>
-                    <input type="text" name="patient_municipality" id="patient_municipality" class="form-control">
+                    <label for="address_municipality">18 - Município de Residência</label>
+                    <input type="text" name="address_municipality" id="address_municipality" class="form-control">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="patient_ibge_code">Código (IBGE)</label>
-                    <input type="text" name="patient_ibge_code" id="patient_ibge_code" class="form-control">
+                    <label for="address_ibge_code">Código (IBGE)</label>
+                    <input type="text" name="address_ibge_code" id="address_ibge_code" class="form-control">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="patient_district">19 - Distrito</label>
-                    <input type="text" name="patient_district" id="patient_district" class="form-control">
+                    <label for="address_district">19 - Distrito</label>
+                    <input type="text" name="address_district" id="address_district" class="form-control">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="patient_neighborhood">20 - Bairro</label>
-                    <input type="text" name="patient_neighborhood" id="patient_neighborhood" class="form-control">
+                    <label for="address_neighborhood">20 - Bairro</label>
+                    <input type="text" name="address_neighborhood" id="address_neighborhood" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="patient_address">21 - Logradouro</label>
-                    <input type="text" name="patient_address" id="patient_address" class="form-control">
+                    <label for="address_address">21 - Logradouro</label>
+                    <input type="text" name="address_address" id="address_address" class="form-control">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="patient_address_code">Código</label>
-                    <input type="text" name="patient_address_code" id="patient_address_code" class="form-control">
+                    <label for="address_address_code">Código</label>
+                    <input type="text" name="address_address_code" id="address_address_code" class="form-control">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <label for="patient_address_number">22 - Número</label>
-                    <input type="text" name="patient_address_number" id="patient_address_number" class="form-control">
+                    <label for="address_address_number">22 - Número</label>
+                    <input type="text" name="address_address_number" id="address_address_number" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="patient_address_complement">23 - Complemento</label>
-                    <input type="text" name="patient_address_complement" id="patient_address_complement" class="form-control">
+                    <label for="address_address_complement">23 - Complemento</label>
+                    <input type="text" name="address_address_complement" id="address_address_complement" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="patient_geofield1">24 - Geo campo 1</label>
-                    <input type="text" name="patient_geofield1" id="patient_geofield1" class="form-control">
+                    <label for="address_geofield1">24 - Geo campo 1</label>
+                    <input type="text" name="address_geofield1" id="address_geofield1" class="form-control">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="patient_geofield2">25 - Geo campo 2</label>
-                    <input type="text" name="patient_geofield2" id="patient_geofield2" class="form-control">
+                    <label for="address_geofield2">25 - Geo campo 2</label>
+                    <input type="text" name="address_geofield2" id="address_geofield2" class="form-control">
                 </div>
                 <div class="form-group col-md-5">
-                    <label for="patient_address_reference">26 - Ponto de Referência</label>
-                    <input type="text" name="patient_address_reference" id="patient_address_reference" class="form-control">
+                    <label for="address_address_reference">26 - Ponto de Referência</label>
+                    <input type="text" name="address_address_reference" id="address_address_reference" class="form-control">
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="patient_cep">27 - CEP</label>
-                    <input type="text" name="patient_cep" id="patient_cep" class="form-control">
+                    <label for="address_cep">27 - CEP</label>
+                    <input type="text" name="address_cep" id="address_cep" class="form-control">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="patient_phone">28 - (DDD) Telefone</label>
-                    <input onkeyup="formatPhoneNumber(this)" type="text" name="patient_phone" id="patient_phone" class="form-control">
+                    <label for="address_phone">28 - (DDD) Telefone</label>
+                    <input onkeyup="formatPhoneNumber(this)" type="text" name="address_phone" id="address_phone" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="patient_zone">29 - Zona</label>
-                    <select name="patient_zone" id="patient_zone" class="form-control">
+                    <label for="address_zone">29 - Zona</label>
+                    <select name="address_zone" id="address_zone" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Urbana</option>
                         <option>2 - Rural</option>
@@ -290,8 +290,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="patient_country">30 - País (se residente fora do Brasil)</label>
-                    <input type="text" name="patient_country" id="patient_country" class="form-control">
+                    <label for="address_country">30 - País (se residente fora do Brasil)</label>
+                    <input type="text" name="address_country" id="address_country" class="form-control">
                 </div>
             </div>
         </fieldset>

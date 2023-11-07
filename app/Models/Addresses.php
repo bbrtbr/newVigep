@@ -9,6 +9,7 @@ class Addresses extends Model
 {
     protected $table = 'addresses';
     protected $primaryKey = 'address_id';
+    
 
     protected $fillable = [
         'address_uf',
