@@ -3,7 +3,7 @@
 @section('content')
 <link href="{{ asset('css/dashboardForms.css') }}" rel="stylesheet">
 <body>
-    <a href='vigep/forms'>Formulários</a>
+<a href="/vigep/forms" class="btn btn-primary">Formulários</a>
     <div class="card-body">
         <div class="search">
             <div class="input-group mb-3">
@@ -34,7 +34,7 @@
                         <td>{{ $case->getDate()['patientName'] }}</td>
                         <td>{{ $case->getDate()['healthUnitName'] }}</td>
                         <td>{{ $case->case_cid }}</td>
-                        <td>{{ $case->get_health_worker_id }}</td>
+                        <td>{{ $case->getDate()['workerName'] }}</td>
                     </tr>
                     @endforeach
                 </tbody>

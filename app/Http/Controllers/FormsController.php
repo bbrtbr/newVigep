@@ -14,7 +14,6 @@ class FormsController extends Controller
     public function dashboard(){
         $patients = Patients::all();
         $cases = ModelsCases::paginate(10);
-        
         return view('vigep.dashVigep', ['patients' => $patients, 'cases' => $cases]);
     }
     
