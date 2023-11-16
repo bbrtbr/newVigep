@@ -10,7 +10,8 @@
         {
             Schema::create('cases', function (Blueprint $table) {
                 $table->id('case_id');
-                $table->enum('case_type', ['2 - Individual'])->nullable();
+                $table->string('case_type')->nullable();
+                $table->enum('case_status', ['Aprovado', 'Reprovado', 'Analise'])->nullable();
                 $table->string('case_disease', 255)->nullable();
                 $table->string('case_cid', 45)->nullable();
                 $table->date('case_notification_date')->nullable();
