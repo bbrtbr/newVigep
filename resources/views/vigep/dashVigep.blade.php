@@ -25,7 +25,7 @@
                         <th>Unidade Saúde</th>
                         <th>Status</th>
                         <th>Responsável</th>
-                        <th>Editar</th>
+                        <th>Alterar</th>
 
                     </tr>
                 </thead>
@@ -37,7 +37,7 @@
                         <td>{{ $case->getDate()['healthUnitName'] }}</td>
                         <td>{{ $case->case_cid }}</td>
                         <td>{{ $case->getDate()['workerName'] }}</td>
-                        <td><a  class="fa fa-edit"></i></a></td>
+                        <td><a href="/vigep/edit/{{ $case->id }}" class="fa fa-edit"></a></td>
                     </tr>
                     @endforeach
                 </tbody>

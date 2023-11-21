@@ -16,6 +16,12 @@ class FormsController extends Controller
         $cases = ModelsCases::paginate(10);
         return view('vigep.dashVigep', ['patients' => $patients, 'cases' => $cases]);
     }
+    public function verifyCPF(Request $request) {
+        $cpf = $request->input('patient_cpf');
+        $paciente = Patients::where('patient_cpf', $cpf)->first();
+    
+        return response()->json($paciente);
+    }
     
     
 }

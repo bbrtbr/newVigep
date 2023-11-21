@@ -45,9 +45,11 @@ Route::middleware('auth')->group(function () {
     /** Formulários - VIGEP */
     Route::get('vigep', [FormsController::class, 'dashboard']);
     Route::get('vigep/forms', [FormsController::class, 'forms']);
+    Route::get('vigep/verifyCPF', [FormsController::class, 'verifyCPF']);
+    /** Formulários - RABIES CASES */
     Route::get('vigep/forms/antirabico', [rabiesCasesController::class, 'index']);
-    Route::post('vigep/forms', [RabiesCasesController::class, 'store'])->name('vigep.store.rabiescases');
-    Route::get('vigep/verifyCPF', [RabiesCasesController::class, 'verifyCPF']);
+    Route::post('/vigep/rabiescases', [rabiesCasesController::class, 'storeOrUpdate'])->name('vigep.rabiescases.storeOrUpdate');
+    Route::get('vigep/rabiescases/edit', [RabiesCasesController::class, 'edit']);
 
 });
 

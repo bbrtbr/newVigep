@@ -22,12 +22,12 @@ class Cases extends Model
     public function getDate() {
         $patient = Patients::find($this->get_patient_id);
         $healthUnit = HealthUnits::find($this->get_health_unit_id);
-        $workerName = HealthWorkers::find($this->get_health_unit_id);
+        $workerName = HealthWorkers::find($this->get_health_worker_id);
         
         $data = [
             'patientName' => $patient ? $patient->patient_name : '',
             'healthUnitName' => $healthUnit ? $healthUnit->health_unit_name : '',
-            'workerName' => $workerName ? $workerName->health_work_name : ''
+            'workerName' => $workerName ? $workerName->health_worker_name : ''
         ];
     
         return $data;

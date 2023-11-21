@@ -14,6 +14,7 @@ class CreateHealthWorkersTable extends Migration
             $table->string('health_worker_name', 255)->nullable();
             $table->string('health_worker_registration', 255)->nullable(); 
             $table->string('health_worker_function', 255)->nullable();
+            $table->string('health_unit_code', 40)->nullable();
             $table->timestamps();
         });
     }

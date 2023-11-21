@@ -14,7 +14,7 @@ class CreateRabiesCasesTable extends Migration
             $table->enum('rabies_case_exposition_type', ['1 - Sim', '2 - Não', '9 - Ignorado', 'Arranhadura', 'Lambedura', 'Mordedura', 'Outro'])->nullable();
             $table->enum('rabies_case_localization', ['1 - Sim', '2 - Não', '3 - Desconhecida', 'Mucosa', 'Cabeça/Pescoço', 'Mãos/Pés', 'Tronco', 'Membros Superiores', 'Membros Inferiores'])->nullable();
             $table->enum('rabies_case_injury', ['1 - Único', '2 - Múltiplo', '3 - Sem ferimento', '9 - Ignorado'])->nullable();
-            $table->enum('rabies_case_injury_type', ['1 - Sim', '2 - Não', '9 - Ignorado', 'Profundo', 'Superficial', 'Dilacerante'])->nullable();
+            $table->varchar('rabies_case_injury_type',20)->nullable();
             $table->date('rabies_case_exposition_date')->nullable();
             $table->enum('rabies_case_history', ['1 - Sim', '2 - Não', '9 - Ignorado', 'Pré-Exposição', 'Pós-Exposição'])->nullable();
             $table->enum('rabies_case_history_when', ['1 - Até 90 dias', '2 - Após 90 dias'])->nullable();

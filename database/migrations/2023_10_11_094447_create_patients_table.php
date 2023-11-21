@@ -16,7 +16,7 @@ class CreatePatientsTable extends Migration
             $table->string('patient_pregnant', 30)->nullable();
             $table->string('patient_race', 15)->nullable();
             $table->string('patient_education', 150)->nullable();
-            $table->integer('patient_cns')->nullable();
+            $table->string('patient_cns', 120)->nullable();
             $table->string('patient_mother_name', 255)->nullable();
             $table->string('patient_cpf',30)->nullable();
             $table->string('patient_phone', 255)->nullable(); // Corrigido para varchar
