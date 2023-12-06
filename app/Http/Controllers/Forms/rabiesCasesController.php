@@ -53,9 +53,10 @@ class rabiesCasesController extends Controller
 
         return redirect('/');
     }
-
+    //f
    
-    public function edit(){
-
+    public function edit($id){
+        $case = ModelsCases::findOrFail($id);
+        return view('vigep.forms.antirabico', compact('case'));
     }
 }

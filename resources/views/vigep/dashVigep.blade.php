@@ -37,7 +37,7 @@
                         <td>{{ $case->getDate()['healthUnitName'] }}</td>
                         <td>{{ $case->case_cid }}</td>
                         <td>{{ $case->getDate()['workerName'] }}</td>
-                        <td><a href="/vigep/edit/{{ $case->id }}" class="fa fa-edit"></a></td>
+                        <td><a href="/vigep/rabiescases/{{ $case->case_id }}/edit" class="fa fa-edit"></a></td>
                     </tr>
                     @endforeach
                 </tbody>
