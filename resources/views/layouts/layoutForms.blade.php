@@ -47,10 +47,15 @@
         <fieldset>
             <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
             <br>
+            
             <div class="form-group">
-                <label for="case_type">1 - Tipo de Notificação</label>
-                <input type="text" id="case_type" class="form-control">
-            </div>
+                    <label for="case_type">1 - Tipo de Notificação</label>
+                    <select name="case_type" id="case_type" class="form-control">
+                        <option>Individual</option>
+                        <option>Coletiva</option>
+                    </select>
+                </div>
+
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="case_disease">2 - Agravo/Doença</label>
@@ -112,11 +117,11 @@
         <fieldset>
             <legend style="text-align: center;"><strong>Notificação Individual</strong></legend>
             <br>
-            <div class="form-row">
-                <div class="form-group col-md-4">
+            <div class="form-group">
                     <label for="patient_cpf">CPF</label>
                     <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control">
-
+            </div>
+            <div class="form-row">
                 </div>
                 <div class="form-group col-md-9">
                     <label for="patient_name">8 - Nome do Paciente</label>
