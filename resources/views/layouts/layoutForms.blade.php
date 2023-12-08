@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="form-group col-md-3">
-                    <label for="firstSymptomsDate">7 - Data dos Primeiros Sintomas</label>
+                    <label for="firstSymptomsDate">7 - Data do Atendimento</label>
                     <input type="date" name="first_symptoms_date" id="firstSymptomsDate" class="form-control">
                 </div>
         </fieldset>
