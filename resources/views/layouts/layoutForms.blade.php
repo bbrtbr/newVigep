@@ -301,6 +301,7 @@
             </div>
         </fieldset>
     </div>
+    <hr>
 
     @yield('content')
 </body>
