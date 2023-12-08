@@ -14,7 +14,7 @@ git clone https://github.com/PiedPiperUFCA/newVigep.git
 ```
 2. Entre no repositorio clonado
 ```bash
-cd projeto-base/
+cd newVigep
 ```
 3. Crie o arquivo .env
 ```bash
