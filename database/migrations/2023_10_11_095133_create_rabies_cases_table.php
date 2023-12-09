@@ -37,7 +37,7 @@ class CreateRabiesCasesTable extends Migration
             $table->integer('rabies_case_vaccine_dose_recommend')->nullable();
             $table->string('rabies_case_treatment', 100)->nullable();
             $table->string('rabies_case_vaccine_lab', 100)->nullable();
-            $table->integer('rabies_case_vaccine_lot_num')->nullable();
+            $table->string('rabies_case_vaccine_lot_num', 45)->nullable();
             $table->date('rabies_case_vaccine_expiration_date')->nullable();
             $table->date('rabies_case_vaccine_date_1')->nullable();
             $table->date('rabies_case_vaccine_date_2')->nullable();
