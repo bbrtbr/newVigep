@@ -122,6 +122,8 @@
                     <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
 
                 </div>
+                <div class="form-row">
+
                 <div class="form-group col-md-9">
                     <label for="patient_name">8 - Nome do Paciente</label>
                     <input type="text" name="patient_name" id="patient_name" class="form-control">
