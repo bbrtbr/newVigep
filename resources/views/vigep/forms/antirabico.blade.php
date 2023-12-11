@@ -1,4 +1,4 @@
-@extends('layouts.layoutforms')
+@extends('layouts.layoutForms')
 @section('title','ANTI-RÁBICO')
 @section('typeNotification','ANTI-RÁBICO HUMANO')
 @section('codCidNotification','W - 64')
@@ -8,7 +8,8 @@
 
     <div class="container">
     <fieldset>
-        <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
+        
+    <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
         <br>
         <form class="form-inline">
             <div class="form-group">
@@ -20,8 +21,8 @@
 
             <div class="form-row">
                 <div class="form-group col-md-2">
-                    <label for="exposure_type_indirect_contact">Contato Indireto</label>
-                    <select name="exposure_type_indirect_contact" id="exposure_type_indirect_contact" class="form-control">
+                    <label for="rabies_case_exposure_contact">Contato Indireto</label>
+                    <select name="rabies_case_exposure_contact" id="rabies_case_exposure_contact" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -29,8 +30,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="exposure_type_scratch">Arranhadura</label>
-                    <select name="exposure_type_scratch" id="exposure_type_scratch" class="form-control">
+                    <label for="rabies_case_exposure_scratch">Arranhadura</label>
+                    <select name="rabies_case_exposure_scratch" id="rabies_case_exposure_scratch" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -38,8 +39,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="exposure_type_lick">Lambedura</label>
-                    <select name="exposure_type_lick" id="exposure_type_lick" class="form-control">
+                    <label for="rabies_case_exposure_lick">Lambedura</label>
+                    <select name="rabies_case_exposure_lick" id="rabies_case_exposure_lick" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -47,8 +48,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="exposure_type_bite">Mordedura</label>
-                    <select name="exposure_type_bite" id="exposure_type_bite" class="form-control">
+                    <label for="rabies_case_exposure_bite">Mordedura</label>
+                    <select name="rabies_case_exposure_bite" id="rabies_case_exposure_bite" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -56,8 +57,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="exposure_type_other">Outro</label>
-                    <select name="exposure_type_other" id="exposure_type_other" class="form-control">
+                    <label for="rabies_case_exposure_other">Outro</label>
+                    <select name="rabies_case_exposure_other" id="rabies_case_exposure_other" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -70,8 +71,8 @@
             <p>33 - Localização</p>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="manifestations_mucosa">Mucosa</label>
-                    <select name="manifestations_mucosa" id="manifestations_mucosa" class="form-control">
+                    <label for="rabies_case_location_mucosa">Mucosa</label>
+                    <select name="rabies_case_location_mucosa" id="rabies_case_location_mucosa" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -79,8 +80,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="manifestations_head_neck">Cabeça/Pescoço</label>
-                    <select name="manifestations_head_neck" id="manifestations_head_neck" class="form-control">
+                    <label for="rabies_case_location_head_neck">Cabeça/Pescoço</label>
+                    <select name="rabies_case_location_head_neck" id="rabies_case_location_head_neck" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -88,8 +89,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="manifestations_hands_feet">Mãos/Pés</label>
-                    <select name="manifestations_hands_feet" id="manifestations_hands_feet" class="form-control">
+                    <label for="rabies_case_location_hands_feet">Mãos/Pés</label>
+                    <select name="rabies_case_location_hands_feet" id="rabies_case_location_hands_feet" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -97,8 +98,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="manifestations_trunk">Tronco</label>
-                    <select name="manifestations_trunk" id="manifestations_trunk" class="form-control">
+                    <label for="rabies_case_location_trunk">Tronco</label>
+                    <select name="rabies_case_location_trunk" id="rabies_case_location_trunk" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -106,8 +107,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="manifestations_upper_limbs">Membros Superiores</label>
-                    <select name="manifestations_upper_limbs" id="manifestations_upper_limbs" class="form-control">
+                    <label for="rabies_case_location_upper_limbs">Membros Superiores</label>
+                    <select name="rabies_case_location_upper_limbs" id="rabies_case_location_upper_limbs" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -115,8 +116,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="manifestations_lower_limbs">Membros Inferiores</label>
-                    <select name="manifestations_lower_limbs" id="manifestations_lower_limbs" class="form-control">
+                    <label for="rabies_case_location_lower_limbs">Membros Inferiores</label>
+                    <select name="rabies_case_location_lower_limbs" id="rabies_case_location_lower_limbs" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -141,8 +142,8 @@
 
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label for="lesion_depth_deep">Profundo</label>
-                    <select name="lesion_depth_deep" id="lesion_depth_deep" class="form-control">
+                    <label for="rabies_case_injury_deep">Profundo</label>
+                    <select name="rabies_case_injury_deep" id="rabies_case_injury_deep" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -150,8 +151,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="lesion_depth_superficial">Superficial</label>
-                    <select name="lesion_depth_superficial" id="lesion_depth_superficial" class="form-control">
+                    <label for="rabies_case_injury_superficial">Superficial</label>
+                    <select name="rabies_case_injury_superficial" id="rabies_case_injury_superficial" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -159,8 +160,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="lesion_depth_lacerating">Dilacerante</label>
-                    <select name="lesion_depth_lacerating" id="lesion_depth_lacerating" class="form-control">
+                    <label for="rabies_case_injury_lacerating">Dilacerante</label>
+                    <select name="rabies_case_injury_lacerating" id="rabies_case_injury_lacerating" class="form-control">
                         <option selected>Escolher...</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
@@ -178,8 +179,8 @@
                 
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="pre_exposure_measures">Pré-Exposição</label>
-                   <select name="pre_exposure_measures" id="pre_exposure_measures" class="form-control">
+                <label for="rabies_case_history_pre_exposure">Pré-Exposição</label>
+                   <select name="rabies_case_history_pre_exposure" id="rabies_case_history_pre_exposure" class="form-control">
                     <option selected>Escolher...</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
@@ -187,8 +188,8 @@
                 </select>
             </div>
             <div class="form-group col-md-6">
-                <label for="post_exposure_measures">Pós-Exposição</label>
-                <select name="post_exposure_measures" id="post_exposure_measures" class="form-control">
+                <label for="rabies_case_history_post_exposure">Pós-Exposição</label>
+                <select name="rabies_case_history_post_exposure" id="rabies_case_history_post_exposure" class="form-control">
                     <option selected>Escolher...</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
@@ -196,8 +197,6 @@
                 </select>
             </div>
             </div>
-
-
             
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -208,11 +207,13 @@
                         <option>2 - Após 90 dias</option>
                     </select>
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="rabies_case_dose_num">39 - Nº de Doses Aplicadas</label>
                     <input name="rabies_case_dose_num" id="rabies_case_dose_num" class="form-control">
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="rabies_case_animal_species">40 - Espécie do Animal Agressor</label>
@@ -300,8 +301,8 @@
             </div>
 
             <div class="form-group col-md-3">
-                <label for="outro">Outro</label>
-                <input type="text" name="outro" id="outro" class="form-control">
+                <label for="rabies_case_vaccine_lab_COMPLEMENT">Outro</label>
+                <input type="text" name="rabies_case_vaccine_lab_COMPLEMENT" id="rabies_case_vaccine_lab_COMPLEMENT" class="form-control">
             </div>
 
             <div class="form-group col-md-3">
@@ -339,7 +340,7 @@
 
             <div class="form-group col-md-2">
                 <label for="rabies_case_vaccine_date_5">Data da 5a dose</label>
-                <input type="date" name="rabies_case_vaccine_date_4" id="rabies_case_vaccine_date_5" class="form-control">
+                <input type="date" name="rabies_case_vaccine_date_5" id="rabies_case_vaccine_date_5" class="form-control">
             </div>
         </div>
 
@@ -440,10 +441,9 @@
                     <option>2 - Não</option>
                 </select>
             </div>
-
             <div class="form-group col-md-1">
-                <label for="rabies_case_serum_on_injury">Se sim</label>
-                <select name="rabies_case_serum_on_injury" id="rabies_case_serum_on_injury" class="form-control">
+                <label for="rabies_case_serum_on_injury_COMPLEMENT">Se sim</label>
+                <select name="rabies_case_serum_on_injury_COMPLEMENT" id="rabies_case_serum_on_injury_COMPLEMENT" class="form-control">
                     <option selected>Escolher...</option>
                     <option>Total</option>
                     <option>Parcial</option>
@@ -459,11 +459,11 @@
                     <option>3 - Aventis Pasteur</option>
                     <option>4 - Outro (Especificar)</option>
                 </select>
-                </div>
-                <div class="form-group col-md-2">
-                    <label for=".">Outro</label>
-                    <input type="text" name="." id="." class="form-control">
-                </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="rabies_case_serum_lab_COMPLEMENT">Outro</label>
+                <input type="text" name="rabies_case_serum_lab_COMPLEMENT" id="rabies_case_serum_lab_COMPLEMENT" class="form-control">
+            </div>
             
         </div>
 
