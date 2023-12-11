@@ -47,10 +47,15 @@
         <fieldset>
             <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
             <br>
+            
             <div class="form-group">
-                <label for="case_type">1 - Tipo de Notificação</label>
-                <input type="text" id="case_type" class="form-control">
-            </div>
+                    <label for="case_type">1 - Tipo de Notificação</label>
+                    <select name="case_type" id="case_type" class="form-control">
+                        <option>Individual</option>
+                        <option>Coletiva</option>
+                    </select>
+                </div>
+
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="case_disease">2 - Agravo/Doença</label>
@@ -100,8 +105,8 @@
                 </div>
 
                 <div class="form-group col-md-3">
-                    <label for="firstSymptomsDate">7 - Data dos Primeiros Sintomas</label>
-                    <input type="date" name="first_symptoms_date" id="firstSymptomsDate" class="form-control">
+                    <label for="case_attendance_date">7 - Data do Atendimento</label>
+                    <input type="date" name="case_attendance_date" id="case_attendance_date" class="form-control">
                 </div>
         </fieldset>
 
@@ -112,10 +117,9 @@
         <fieldset>
             <legend style="text-align: center;"><strong>Notificação Individual</strong></legend>
             <br>
-            <div class="form-row">
-                <div class="form-group col-md-4">
+            <div class="form-group">
                     <label for="patient_cpf">CPF</label>
-                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
+                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control">
 
                 </div>
                 <div class="form-group col-md-9">
@@ -196,7 +200,7 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="patient_cns">15 - Número do Cartão SUS</label>
-                    <input type="number" name="patient_cns" id="patient_cns" class="form-control">
+                    <input type="text" name="patient_cns" id="patient_cns" class="form-control">
                 </div>
 
                 <div class="form-group col-md-8">
@@ -296,6 +300,7 @@
             </div>
         </fieldset>
     </div>
+    <hr>
 
     @yield('content')
 </body>

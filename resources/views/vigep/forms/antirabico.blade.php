@@ -416,12 +416,12 @@
                 <input type="text" name="rabies_case_patient_weight" id="rabies_case_patient_weight" class="form-control">
             </div>
 
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
                 <label for="rabies_case_serum_quantity">55 -Quantidade de Soro Aplicada (ml)</label>
                 <input type="text" name="rabies_case_serum_quantity" id="rabies_case_serum_quantity" class="form-control">
             </div>
 
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-2">
                 <label for="rabies_case_serum_application">Soro</label>
                 <select name="rabies_case_serum_application" id="rabies_case_serum_application" class="form-control">
                     <option selected>Escolher...</option>

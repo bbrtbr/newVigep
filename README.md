@@ -10,11 +10,11 @@ Antes de começar, verifique se você possui o Docker instalado em sua máquina.
 
 1. Clone este repositório em sua máquina usando o seguinte comando:
 ```bash
-git clone https://github.com/holding-eficiencia/projeto-base.git
+git clone https://github.com/PiedPiperUFCA/newVigep.git
 ```
 2. Entre no repositorio clonado
 ```bash
-cd projeto-base/
+cd newVigep
 ```
 3. Crie o arquivo .env
 ```bash
