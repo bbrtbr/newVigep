@@ -1,4 +1,4 @@
-@extends('layouts.layoutforms')
+@extends('layouts.layoutForms')
 @section('title','ANTI-RÁBICO')
 @section('typeNotification','ANTI-RÁBICO HUMANO')
 @section('codCidNotification','W - 64')
