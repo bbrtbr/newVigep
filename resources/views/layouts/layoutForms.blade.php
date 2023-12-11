@@ -201,7 +201,7 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="patient_cns">15 - Número do Cartão SUS</label>
-                    <input type="number" name="patient_cns" id="patient_cns" class="form-control">
+                    <input type="text" name="patient_cns" id="patient_cns" class="form-control">
                 </div>
 
                 <div class="form-group col-md-8">
