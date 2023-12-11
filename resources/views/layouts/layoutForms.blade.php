@@ -119,7 +119,7 @@
             <br>
             <div class="form-group">
                     <label for="patient_cpf">CPF</label>
-                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control">
+                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
 
                 </div>
                 <div class="form-group col-md-9">
