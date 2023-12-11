@@ -144,7 +144,7 @@
                 <div class="form-group col-md-3">
                     <label for="patient_sex">11 - Sexo</label>
                     <select name="patient_sex" id="patient_sex" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>M - Masculino</option>
                         <option>F - Feminino</option>
                         <option>I - Ignorado</option>
@@ -154,27 +154,26 @@
                 <div class="form-group col-md-3">
                     <label for="patient_pregnant">12 - Gestante</label>
                     <select name="patient_pregnant" id="patient_pregnant" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - 1° Trimestre</option>
                         <option>2 - 2° Trimestre</option>
                         <option>3 - 3° Trimestre</option>
                         <option>4 - Idade Gestacional Ignorada</option>
                         <option>5 - Não</option>
                         <option>6 - Não se aplica</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
 
                 <div class="form-group col-md-3">
                     <label for="patient_race">13 - Raça/Cor</label>
                     <select name="patient_race" id="patient_race" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorada</option>
                         <option>1 - Branca</option>
                         <option>2 - Preta</option>
                         <option>3 - Amarela</option>
                         <option>4 - Parda</option>
                         <option>5 - Indígena</option>
-                        <option>9 - Ignorada</option>
                     </select>
                 </div>
 
@@ -183,7 +182,7 @@
             <div class="form-group">
                 <label for="patient_education">14 - Escolaridade</label>
                 <select name="patient_education" id="patient_education" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>0 - Analfabeto</option>
                     <option>1 - 1ª a 4ª série incompleta do EF (antigo primário ou 1º grau)</option>
                     <option>2 - 4ª série completa do EF (antigo primário ou 1º grau)</option>
@@ -193,7 +192,7 @@
                     <option>6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
                     <option>7 - Educação superior incompleta</option>
                     <option>8 - Educação superior completa</option>
-                    <option>9 - Ignorado</option>
+                    
                     <option>10 - Não se aplica</option>
 
                 </select>
@@ -288,11 +287,11 @@
                 <div class="form-group col-md-4">
                     <label for="address_zone">29 - Zona</label>
                     <select name="address_zone" id="address_zone" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Urbana</option>
                         <option>2 - Rural</option>
                         <option>3 - Periurbana</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
