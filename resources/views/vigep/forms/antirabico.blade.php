@@ -23,46 +23,46 @@
                 <div class="form-group col-md-2">
                     <label for="rabies_case_exposure_contact">Contato Indireto</label>
                     <select name="rabies_case_exposure_contact" id="rabies_case_exposure_contact" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="rabies_case_exposure_scratch">Arranhadura</label>
                     <select name="rabies_case_exposure_scratch" id="rabies_case_exposure_scratch" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="rabies_case_exposure_lick">Lambedura</label>
                     <select name="rabies_case_exposure_lick" id="rabies_case_exposure_lick" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="rabies_case_exposure_bite">Mordedura</label>
                     <select name="rabies_case_exposure_bite" id="rabies_case_exposure_bite" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_exposure_other">Outro</label>
                     <select name="rabies_case_exposure_other" id="rabies_case_exposure_other" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                     </div>
@@ -73,55 +73,55 @@
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_mucosa">Mucosa</label>
                     <select name="rabies_case_location_mucosa" id="rabies_case_location_mucosa" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_head_neck">Cabeça/Pescoço</label>
                     <select name="rabies_case_location_head_neck" id="rabies_case_location_head_neck" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_hands_feet">Mãos/Pés</label>
                     <select name="rabies_case_location_hands_feet" id="rabies_case_location_hands_feet" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_trunk">Tronco</label>
                     <select name="rabies_case_location_trunk" id="rabies_case_location_trunk" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_upper_limbs">Membros Superiores</label>
                     <select name="rabies_case_location_upper_limbs" id="rabies_case_location_upper_limbs" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="rabies_case_location_lower_limbs">Membros Inferiores</label>
                     <select name="rabies_case_location_lower_limbs" id="rabies_case_location_lower_limbs" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>3 - Desconhecida</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>3 - Desconhecida</option>
+                        
                     </select>
                 </div>
                 </div>
@@ -130,11 +130,11 @@
                 <div class="form-group">
                     <label for="rabies_case_injury">34 - Ferimento</label>
                     <select id='rabies_case_injury' name="rabies_case_injury" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Único</option>
                         <option>2 - Múltiplo</option>
                         <option>3 - Sem ferimento</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
 
@@ -144,28 +144,28 @@
                 <div class="form-group col-md-3">
                     <label for="rabies_case_injury_deep">Profundo</label>
                     <select name="rabies_case_injury_deep" id="rabies_case_injury_deep" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="rabies_case_injury_superficial">Superficial</label>
                     <select name="rabies_case_injury_superficial" id="rabies_case_injury_superficial" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
                 <div class="form-group col-md-3">
                     <label for="rabies_case_injury_lacerating">Dilacerante</label>
                     <select name="rabies_case_injury_lacerating" id="rabies_case_injury_lacerating" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
-                        <option>9 - Ignorado</option>
+                        
                     </select>
                 </div>
             
@@ -181,19 +181,19 @@
               <div class="form-group col-md-6">
                 <label for="rabies_case_history_pre_exposure">Pré-Exposição</label>
                    <select name="rabies_case_history_pre_exposure" id="rabies_case_history_pre_exposure" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
-                    <option>9 - Ignorado</option>
+                    
                 </select>
             </div>
             <div class="form-group col-md-6">
                 <label for="rabies_case_history_post_exposure">Pós-Exposição</label>
                 <select name="rabies_case_history_post_exposure" id="rabies_case_history_post_exposure" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
-                    <option>9 - Ignorado</option>
+                    
                 </select>
             </div>
             </div>
@@ -202,7 +202,7 @@
                 <div class="form-group col-md-6">
                     <label for="rabies_case_history_when">38 - Se Houve, quando foi concluído?</label>
                     <select name="rabies_case_history_when" id="rabies_case_history_when" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Até 90 dias</option>
                         <option>2 - Após 90 dias</option>
                     </select>
@@ -218,7 +218,7 @@
                 <div class="form-group col-md-6">
                     <label for="rabies_case_animal_species">40 - Espécie do Animal Agressor</label>
                     <select name="rabies_case_animal_species" id="rabies_case_animal_species" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Canina</option>
                         <option>2 - Felina</option>
                         <option>3 - Quiróptera (Morcego)</option>
@@ -241,7 +241,7 @@
                 <div class="form-group col-md-6">
                     <label for="rabies_case_animal_condition">41 - Condição do Animal para Fins de Conduta do Tratamento</label>
                     <select name="rabies_case_animal_condition" id="rabies_case_animal_condition" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sadio</option>
                         <option>2 - Suspeito</option>
                         <option>3 - Raivoso</option>
@@ -251,7 +251,7 @@
                 <div class="form-group col-md-6">
                     <label for="rabies_case_animal_observation">42 - Animal Passível de Observação? (Somente para Cão ou Gato)</label>
                     <select name="rabies_case_animal_observation" id="rabies_case_animal_observation" class="form-control">
-                        <option selected>Escolher...</option>
+                        <option selected>9 - Ignorado</option>
                         <option>1 - Sim</option>
                         <option>2 - Não</option>
                     </select>
@@ -275,7 +275,7 @@
             <div class="form-group col-6">
                 <label for="rabies_case_treatment" >43 - Tratamento Indicado</label>
                 <select name="rabies_case_treatment" id="rabies_case_treatment" class="form-control">
-                <option selected>Escolher...</option>
+                <option selected>9 - Ignorado</option>
                 <option>1 - Pré Exposição</option>
                 <option>2 - Dispensa de Tratamento</option>
                 <option>3 - Observação do animal (se cão ou gato)</option>
@@ -292,7 +292,7 @@
             <div class="form-group col-md-3">
                 <label for="rabies_case_vaccine_lab">44 - Laboratório Produtor da Vacina</label>
                 <select name="rabies_case_vaccine_lab" id="rabies_case_vaccine_lab" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Instituto Butantan</option>
                     <option>2 - Instituto Vital Brasil</option>
                     <option>3 - Aventis Pasteur</option>
@@ -347,13 +347,13 @@
         <div class="form-group">
             <label for="rabies_case_animal_final_condition">48 - Condição Final do Animal (após período de observação)</label>
             <select name="rabies_case_animal_final_condition" id="rabies_case_animal_final_condition" class="form-control">
-                <option selected>Escolher...</option>
+                <option selected>9 - Ignorado</option>
                 <option>1 - Negativo para Raiva (Clínica)</option>
                 <option>2 - Negativo para Raiva (Laboratório)</option>
                 <option>3 - Positivo para Raiva (Clínica)</option>
                 <option>4 - Positivo para Raiva (Laboratório)</option>
                 <option>5 - Morto/ Sacrificado/ Sem Diagnóstico</option>
-                <option>9 - Ignorado</option>
+                
             </select>
         </div>
 
@@ -361,7 +361,7 @@
             <div class="form-group col-md-4">
                 <label for="rabies_case_treatment_interruption">49 - Houve Interrupção do Tratamento</label>
                 <select name="rabies_case_treatment_interruption" id="rabies_case_treatment_interruption" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
                 </select>
@@ -371,7 +371,7 @@
             <div class="form-group col-md-8">
                 <label for="rabies_case_treatment_interruption_reason">50 - Qual o Motivo da Interrupção</label>
                 <select name="rabies_case_treatment_interruption_reason" id="rabies_case_treatment_interruption_reason" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Indicação da Unidade de Saúde</option>
                     <option>2 - Abandono</option>
                     <option>3 - Transferência</option>
@@ -383,7 +383,7 @@
             <div class="form-group col-md-8">
                 <label for="rabies_case_treatment_interruption_unit">51 - Se houve Abandono do Tratamento, a Unidade de Saúde Procurou o Paciente</label>
                 <select name="rabies_case_treatment_interruption_unit" id="rabies_case_treatment_interruption_unit" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
                 </select>
@@ -393,10 +393,10 @@
             <div class="form-group col-md-4">
                 <label for="rabies_case_vaccine_adverse_event">52 - Evento Adverso à Vacina</label>
                 <select name="rabies_case_vaccine_adverse_event" id="rabies_case_vaccine_adverse_event" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
-                    <option>9 - Ignorado</option>
+                    
                 </select>
             </div>
         </div>
@@ -405,7 +405,7 @@
             <div class="form-group col-md-3">
                 <label for="rabies_case_serum">53 - Indicação do Soro Anti-Rábico</label>
                 <select name="rabies_case_serum" id="rabies_case_serum" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
                 </select>
@@ -424,7 +424,7 @@
             <div class="form-group col-md-2">
                 <label for="rabies_case_serum_application">Soro</label>
                 <select name="rabies_case_serum_application" id="rabies_case_serum_application" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Heterólogo</option>
                     <option>2 - Homólogo</option>
                 </select>
@@ -436,7 +436,7 @@
             <div class="form-group col-md-5">
                 <label for="rabies_case_serum_on_injury">56 - Infriltração de Soro no(s) Local(is) do(s) Ferimento(s)</label>
                 <select name="rabies_case_serum_on_injury" id="rabies_case_serum_on_injury" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
                 </select>
@@ -444,7 +444,7 @@
             <div class="form-group col-md-1">
                 <label for="rabies_case_serum_on_injury_COMPLEMENT">Se sim</label>
                 <select name="rabies_case_serum_on_injury_COMPLEMENT" id="rabies_case_serum_on_injury_COMPLEMENT" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>Total</option>
                     <option>Parcial</option>
                 </select>
@@ -453,7 +453,7 @@
             <div class="form-group col-md-4">
                 <label for="rabies_case_serum_lab">57 - Laborátorio Produtor do Soro Anti-Rábico</label>
                 <select name="rabies_case_serum_lab" id="rabies_case_serum_lab" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Instituto Butantan</option>
                     <option>2 - Instituto Vital Brasil</option>
                     <option>3 - Aventis Pasteur</option>
@@ -476,10 +476,10 @@
             <div class="form-group col-md-4">
                 <label for="rabies_case_serum_adverse_event">59 - Evento Adverso ao Soro Anti-Rábico</label>
                 <select name="rabies_case_serum_adverse_event" id="rabies_case_serum_adverse_event" class="form-control">
-                    <option selected>Escolher...</option>
+                    <option selected>9 - Ignorado</option>
                     <option>1 - Sim</option>
                     <option>2 - Não</option>
-                    <option>9 - Ignorado</option>
+                    
                 </select>
             </div>
 
