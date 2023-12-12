@@ -5,13 +5,18 @@ namespace App\Http\Controllers\Forms;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cases as ModelsCases;
+use Spatie\Permission\Exceptions\UnauthorizedException;
 use App\Models\Patients, App\Models\Addresses, App\Models\RabiesCases, App\Models\HealthUnits, App\Models\HealthWorkers;
 
 class rabiesCasesController extends Controller
 {
     public function index()
     {
+        if (!auth()->user()->hasRole('Super Admin')) {
+            throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
+        }else{
         return view('vigep.forms.antirabico');
+        }
     }
 
     public function storeOrUpdate(Request $request)
