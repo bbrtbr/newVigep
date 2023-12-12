@@ -28,9 +28,6 @@ class PermissionController extends Controller
 
     public function loadDataTable(Request $request)
     {   
-        if (!auth()->user()->hasRole('Super Admin')) {
-            throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
-        }
         if ($request->ajax()) {
             $permissions = Permission::select(['id', 'name','group','created_at']) ;                                           
             return DataTables::of($permissions)
