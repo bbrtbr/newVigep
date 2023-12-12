@@ -12,7 +12,7 @@ class rabiesCasesController extends Controller
 {
     public function index()
     {
-        if (!auth()->user()->hasRole('Super Admin')) {
+        if (!auth()->user()->hasPermissionTo('VIGEP FUNCIONARIO')) {
             throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
         }else{
         return view('vigep.forms.antirabico');
