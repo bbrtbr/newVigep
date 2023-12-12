@@ -513,11 +513,11 @@
 <div class="form-row">
     <div class="form-group col-md-6">
         <label for="health_worker_registration">Matrícula</label>
-        <input type="text" name="health_worker_registration" id="health_worker_registration" class="form-control">
+        <input type="text" name="health_worker_registration" id="health_worker_registration" class="form-control" required>
     </div>
     <div class="form-group col-md-6">
         <label for="health_worker_name">Nome</label>
-        <input type="text" name="health_worker_name" id="health_worker_name" class="form-control">
+        <input type="text" name="health_worker_name" id="health_worker_name" class="form-control" required>
     </div>
 </div>
 </div>
