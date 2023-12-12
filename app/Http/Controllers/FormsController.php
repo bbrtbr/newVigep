@@ -10,7 +10,7 @@ class FormsController extends Controller
 {
     public function forms()
     {
-        if (!auth()->user()->hasPermissionTo('Listarr todos os formulários - VIGEP')) {
+        if (!auth()->user()->hasPermissionTo('Listar todos os formulários - VIGEP')) {
             throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
         }else{
         return view('vigep.dashVigepForms');
@@ -19,7 +19,7 @@ class FormsController extends Controller
     public function dashboard(){
         $patients = Patients::all();
         $cases = ModelsCases::paginate(10);
-        if (!auth()->user()->hasRole('VIGEP FUNCIONARIO')) {
+        if (!auth()->user()->hasRole('Listar todos os formulários - VIGEP')) {
             throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
         }else{
         return view('vigep.dashVigep', ['patients' => $patients, 'cases' => $cases]);
