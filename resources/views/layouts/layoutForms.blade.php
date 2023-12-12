@@ -144,10 +144,9 @@
                 <div class="form-group col-md-3">
                     <label for="patient_sex">11 - Sexo</label>
                     <select name="patient_sex" id="patient_sex" class="form-control">
-                        <option selected>9 - Ignorado</option>
+                        <option selected>I - Ignorado</option>
                         <option>M - Masculino</option>
                         <option>F - Feminino</option>
-                        <option>I - Ignorado</option>
                     </select>
                 </div>
 
