@@ -69,7 +69,7 @@ class rabiesCasesController extends Controller
     public function edit($id)
 {
     $case = ModelsCases::findOrFail($id);
-    $rabiesCases = ModelsCases::findOrFail($case->get_case_id);
+    $rabiesCases = ModelsCases::findOrFail(2);
 
     return view('vigep.forms.antirabico', compact('case', 'rabiesCases')); 
 }
