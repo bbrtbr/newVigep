@@ -498,7 +498,7 @@
         <br>
         <div class="form-group">
             <label for="rabies_case_obs"><strong>Observações</strong></label>
-            <input type="text" name="rabies_case_obs" id="rabies_case_obs" class="form-control">
+            <input type="text" value="{{ isset($rabiesCase) ? $rabiesCase->rabies_case_obs : '' }}" name="rabies_case_obs" id="rabies_case_obs" class="form-control">
         </div>
 
     </fieldset>
