@@ -8,13 +8,12 @@
 
     <div class="container">
     <fieldset>
-        <p>{{ $case->case_status }}</p>
     <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
         <br>
         <form class="form-inline">
             <div class="form-group">
                 <label for="rabies_case_occupation">31 - Ocupação</label>
-                <input type="text" name="rabies_case_occupation" id="rabies_case_occupation" class="form-control">
+                <input type="text" value="{{ isset($rabiesCase) ? $rabiesCase->rabies_case_occupation : '' }}" name="rabies_case_occupation" id="rabies_case_occupation" class="form-control">
             </div>
 
             <p>32 - Tipo de Exposição ao Vírus Rábico</p>
