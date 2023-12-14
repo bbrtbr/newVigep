@@ -8,7 +8,7 @@
 
     <div class="container">
     <fieldset>
-        
+        <p>{{ $case->case_status }}</p>
     <legend style="text-align: center;"><strong>Antecedentes Epidemiológicos</strong></legend>
         <br>
         <form class="form-inline">
