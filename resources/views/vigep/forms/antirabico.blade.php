@@ -130,9 +130,9 @@
                         <label for="rabies_case_injury">34 - Ferimento</label>
                         
                         <select value="{{ isset($rabiesCase) ? $rabiesCase->rabies_case_injury : '' }}" id='rabies_case_injury' name="rabies_case_injury" class="form-control">
-                            <option     >9 - Ignorado</option>
+                            <option>9 - Ignorado</option>
                             <option>1 - Único</option>
-                            <option {{ $rabiesCase->rabies_case_injury == '2 - Múltiplo' ? 'selected' : '' }}>2 - Múltiplo</option>
+                            <option>2 - Múltiplo</option>
                             <option>3 - Sem ferimento</option>
 
                         </select>

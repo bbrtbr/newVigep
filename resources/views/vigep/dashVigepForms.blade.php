@@ -14,15 +14,8 @@
         </div>
 
         <div class="btn-container" id="btnContainer">
-            <a href="/vigep/forms/antirabico" class="btn btn-primary">Influenza - SINAN</a>
+            <a href="/vigep/forms/tuberculose" class="btn btn-primary">TUBERCULOSE - SINAN</a>
             <a href="/vigep/forms/antirabico" class="btn btn-success">ANTI-RÁBICO HUMANO - SINAN</a>
-            <a href="/vigep/forms/antirabico" class="btn btn-danger">Dengue - SINAN</a>
-            <a href="/vigep/forms/antirabico" class="btn btn-warning">Zika - SINAN</a>
-            <a href="/vigep/forms/antirabico" class="btn btn-success">Febre Amarela - SINAN</a>
-            <a href="/vigep/forms/antirabico" class="btn btn-primary">Meningite - SINAN</a>
-            <a href="/vigep/forms/antirabico" class="btn btn-primary">Intoxicação Exógena - SINAN</a>
-
-
         </div>
     </div>
 

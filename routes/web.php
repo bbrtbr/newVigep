@@ -7,6 +7,10 @@ use App\Http\Controllers\ACL\RoleController;
 use App\Http\Controllers\ACL\PermissionController;
 use App\Http\Controllers\FormsController;
 use App\Http\Controllers\Forms\rabiesCasesController;
+use App\Http\Controllers\Forms\tuberculoseCasesController;
+use App\Http\Controllers\HealthUnitsController;
+use App\Models\HealthUnits;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +45,11 @@ Route::middleware('auth')->group(function () {
     /** Permissões */
     Route::get('permissions/load', [PermissionController::class, 'loadDataTable'])->name('permissions.load');
     Route::resource('permissions', PermissionController::class);
-
+    /**Unidades de saúde - VIGEP */
+    Route::get('vigep/healthunits', [HealthUnitsController::class, 'index'])->name('vigep.healthunits');
+    Route::get('vigep/healthunits/create', [HealthUnitsController::class, 'create']);
+    Route::get('vigep/healthunits/{id}/edit', [HealthUnitsController::class, 'edit']);
+    Route::post('vigep/healthunits', [HealthUnitsController::class, 'storeOrUpdateUnits'])->name('vigep.healthunits.storeOrUpdate');
     /** Formulários - VIGEP */
     Route::get('vigep', [FormsController::class, 'dashboard'])->name('vigep.index');
     Route::get('vigep/forms', [FormsController::class, 'forms'])->name('vigep.forms');
@@ -50,7 +58,10 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/forms/antirabico', [rabiesCasesController::class, 'index']);
     Route::post('/vigep/rabiescases', [rabiesCasesController::class, 'storeOrUpdate'])->name('vigep.rabiescases.storeOrUpdate');
     Route::get('vigep/rabiescases/{id}/edit', [RabiesCasesController::class, 'edit']);
-
+    /** Formulários - Tuberculose */
+    Route::get('vigep/forms/tuberculose', [tuberculoseCasesController::class, 'index']);
+    Route::post('/vigep/rabiescases', [tuberculoseCasesController::class, 'storeOrUpdate'])->name('vigep.tuberculoseCases.storeOrUpdate');
+    Route::get('vigep/tuberculose/{id}/edit', [tuberculoseCasesController::class, 'edit']);
 });
 
 require __DIR__ . '/auth.php';

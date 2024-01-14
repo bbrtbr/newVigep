@@ -4,6 +4,7 @@
 <link href="{{ asset('css/dashboardForms.css') }}" rel="stylesheet">
 <body>
 <a href="/vigep/forms" class="btn btn-primary">Formulários</a>
+<a href="/vigep/healthunits" class="btn btn-primary">Estabelecimentos</a>
     <div class="card-body">
         <div class="search">
             <div class="input-group mb-3">

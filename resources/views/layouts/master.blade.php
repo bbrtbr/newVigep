@@ -75,7 +75,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item  " href="{{route('vigep.index')}}">Dashboard</a>
                         <a class="collapse-item " href="{{route('vigep.forms')}}">Formulários</a>
-
+                        <a class="collapse-item " href="{{route('vigep.healthunits')}}">Estabelecimentos</a>
 
                     </div>
                 </div>

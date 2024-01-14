@@ -30,7 +30,7 @@ class PermissionsTableSeeder extends Seeder
         Permission::create(['name' => 'Excluir Perfil de Usuário', 'group' => 'Perfis de Usuário']);
         Permission::create(['name' => 'Listar Perfis de Usuário', 'group' => 'Perfis de Usuário']);
         Permission::create(['name' => 'Associar Permissões ao Perfil de Usuário', 'group' => 'Perfis de Usuário']);
-
+        
 
         $role = Role::create(['name' => 'Super Admin']);
         $user = User::where('id',1)->first();
