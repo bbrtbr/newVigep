@@ -1,7 +1,10 @@
 @extends('layouts.master')
 @section('title', 'Formularios')
 @section('content')
+<h2 class="h4 mb-2 text-gray-800">Estabelecimento de Saúde</h2>
+@include('vigep.healthunits.cards')
 <a href="/vigep/healthunits/create" class="btn btn-primary">Adicionar</a>
+
 <div class="table-responsive" style="margin-top: 20px;">
     <table class="table table-bordered table-sm" id="dataTableUsers" width="100%" cellspacing="0">
         <thead>

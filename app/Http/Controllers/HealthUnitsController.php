@@ -13,11 +13,15 @@ class HealthUnitsController extends Controller
     {
         $healthUnits = HealthUnits::paginate(20);
         $addresses = Addresses::all();
-
+        $healthUnitsCount = HealthUnits::count();
         if (!auth()->user()->hasPermissionTo('Listar todos os formulários - VIGEP')) {
             throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
         } else {
-            return view('vigep.healthunits.index', ['healthUnits' => $healthUnits, 'addresses' => $addresses]);
+            return view('vigep.healthunits.index', [
+                'healthUnits' => $healthUnits,
+                'addresses' => $addresses,
+                'healthUnitsCount' => $healthUnitsCount,
+            ]);
         }
     }
     public function create()
@@ -28,9 +32,8 @@ class HealthUnitsController extends Controller
     public function edit($id)
     {
         $case = HealthUnits::findOrFail($id);
-       
+
         return view('vigep.healthunits.createOrEdit', compact('case'));
-        
     }
     public function storeOrUpdateUnits(Request $request)
     {

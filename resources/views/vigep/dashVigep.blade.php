@@ -2,10 +2,14 @@
 @section('title', 'Formularios')
 @section('content')
 <link href="{{ asset('css/dashboardForms.css') }}" rel="stylesheet">
+
 <body>
-<a href="/vigep/forms" class="btn btn-primary">Formulários</a>
-<a href="/vigep/healthunits" class="btn btn-primary">Estabelecimentos</a>
+    <h2 class="h4 mb-2 text-gray-800">Dashboard</h2>
+    <a href="/vigep/forms" class="btn btn-primary">Formulários</a>
+    <a href="/vigep/healthunits" class="btn btn-primary">Estabelecimentos</a>
+
     <div class="card-body">
+        @include('vigep.cards')
         <div class="search">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -14,7 +18,7 @@
                     </span>
                 </div>
                 <input type="text" id="searchInput" class="form-control" style="padding-left: 10px;" placeholder="Pesquisar...">
-                
+
             </div>
         </div>
         <div class="table-responsive" style="margin-top: 20px;">
@@ -23,7 +27,7 @@
                     <tr>
                         <th>Caso</th>
                         <th>Paciente</th>
-                        <th>Unidade Saúde</th>
+                        <th>Estabelecimento</th>
                         <th>Status</th>
                         <th>Responsável</th>
                         <th>Alterar</th>
@@ -36,9 +40,9 @@
                         <td>{{ $case->case_disease }}</td>
                         <td>{{ $case->getDate()['patientName'] }}</td>
                         <td>{{ $case->getDate()['healthUnitName'] }}</td>
-                        <td>{{ $case->case_cid }}</td>
+                        <td>{{ $case->case_status }}</td>
                         <td>{{ $case->getDate()['workerName'] }}</td>
-                        <td><a href="/vigep/rabiescases/{{ $case->case_id }}/edit" class="fa fa-edit"></a></td>
+                        <td><a class="fa fa-edit"></a></td>
                     </tr>
                     @endforeach
                 </tbody>

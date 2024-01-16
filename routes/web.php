@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/verifyCPF', [FormsController::class, 'verifyCPF']);
     /** Formulários - RABIES CASES */
     Route::get('vigep/forms/antirabico', [rabiesCasesController::class, 'index']);
-    Route::post('/vigep/rabiescases', [rabiesCasesController::class, 'storeOrUpdate'])->name('vigep.rabiescases.storeOrUpdate');
+    Route::post('/vigep/rabiescases/storeOrUpdate', [rabiesCasesController::class, 'storeOrUpdate'])->name('vigep.rabiescases.storeOrUpdate');
     Route::get('vigep/rabiescases/{id}/edit', [RabiesCasesController::class, 'edit']);
     /** Formulários - Tuberculose */
     Route::get('vigep/forms/tuberculose', [tuberculoseCasesController::class, 'index']);

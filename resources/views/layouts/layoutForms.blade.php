@@ -47,14 +47,14 @@
         <fieldset>
             <legend style="text-align: center;"><strong>Dados Gerais</strong></legend>
             <br>
-            
+
             <div class="form-group">
-                    <label for="case_type">1 - Tipo de Notificação</label>
-                    <select name="case_type" id="case_type" class="form-control">
-                        <option>Individual</option>
-                        <option>Coletiva</option>
-                    </select>
-                </div>
+                <label for="case_type">1 - Tipo de Notificação</label>
+                <select name="case_type" id="case_type" class="form-control">
+                    <option>Individual</option>
+                    <option>Coletiva</option>
+                </select>
+            </div>
 
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -95,19 +95,26 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="health_unit_name">6 - Unidade de Saúde (ou outra fonte notificadora)</label>
-                    <input id="health_unit_name" list="suggestionUnidSaude" name="health_unit_name" class="form-control">
-                    <datalist id="suggestionUnidSaude"></datalist>
+                    <div class="input-group">
+                        <select id="health_unit_name" name="health_unit_name" class="form-control">
+                            <option value="" disabled selected>Selecione uma opção</option>
+                            @foreach ($healthUnits as $unit)
+                            <option value="{{ $unit->health_unit_name }}" data-code="{{ $unit->health_unit_code }}">{{ $unit->health_unit_name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
-
                 <div class="form-group col-md-3">
                     <label for="unitCode">Código</label>
-                    <input type="text" id="health_unit_code" name="health_unit_code" class="form-control">
+                    <input disabled type="text" id="health_unit_code" name="health_unit_code" class="form-control">
                 </div>
+            </div>
 
-                <div class="form-group col-md-3">
-                    <label for="case_attendance_date">7 - Data do Atendimento</label>
-                    <input type="date" name="case_attendance_date" id="case_attendance_date" class="form-control">
-                </div>
+
+            <div class="form-group col-md-3">
+                <label for="case_attendance_date">7 - Data do Atendimento</label>
+                <input type="date" name="case_attendance_date" id="case_attendance_date" class="form-control">
+            </div>
         </fieldset>
 
 
@@ -118,10 +125,10 @@
             <legend style="text-align: center;"><strong>Notificação Individual</strong></legend>
             <br>
             <div class="form-group">
-                    <label for="patient_cpf">CPF</label>
-                    <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
-                </div>
-                <div class="form-row">
+                <label for="patient_cpf">CPF</label>
+                <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
+            </div>
+            <div class="form-row">
 
                 <div class="form-group col-md-9">
                     <label for="patient_name">8 - Nome do Paciente</label>
@@ -159,7 +166,7 @@
                         <option>4 - Idade Gestacional Ignorada</option>
                         <option>5 - Não</option>
                         <option>6 - Não se aplica</option>
-                        
+
                     </select>
                 </div>
 
@@ -190,7 +197,7 @@
                     <option>6 - Ensino médio completo (antigo colegial ou 2º grau)</option>
                     <option>7 - Educação superior incompleta</option>
                     <option>8 - Educação superior completa</option>
-                    
+
                     <option>10 - Não se aplica</option>
 
                 </select>
@@ -289,7 +296,7 @@
                         <option>1 - Urbana</option>
                         <option>2 - Rural</option>
                         <option>3 - Periurbana</option>
-                        
+
                     </select>
                 </div>
                 <div class="form-group col-md-4">
@@ -303,11 +310,12 @@
 
     @yield('content')
 </body>
-<script src="{{ asset('js/scriptForms/getCodeSugestion.js') }}"></script>
+
 <script src="{{ asset('js/scriptForms/getAge.js') }}"></script>
 <script src="{{ asset('js/scriptForms/getCityStateNotification.js') }}"></script>
 <script src="{{ asset('js/scriptForms/formatNumberPhone.js') }}"></script>
 <script src="{{ asset('js/scriptForms/formatNumberCPF.js') }}"></script>
 <script src="{{ asset('js/scriptForms/verifyPacient.js') }}"></script>
+<script src="{{ asset('js/scriptForms/getCodeHealthUnit.js') }}"></script>
 
 </html>
