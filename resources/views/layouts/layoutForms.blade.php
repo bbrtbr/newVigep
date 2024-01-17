@@ -108,12 +108,10 @@
                     <label for="unitCode">Código</label>
                     <input disabled type="text" id="health_unit_code" name="health_unit_code" class="form-control">
                 </div>
-            </div>
-
-
-            <div class="form-group col-md-3">
-                <label for="case_attendance_date">7 - Data do Atendimento</label>
-                <input type="date" name="case_attendance_date" id="case_attendance_date" class="form-control">
+                <div class="form-group col-md-3">
+                    <label for="case_attendance_date">7 - Data do Atendimento</label>
+                    <input type="date" name="case_attendance_date" id="case_attendance_date" class="form-control">
+                </div>
             </div>
         </fieldset>
 

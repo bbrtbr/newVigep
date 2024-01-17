@@ -76,7 +76,7 @@
                         <a class="collapse-item  " href="{{route('vigep.index')}}">Dashboard</a>
                         <a class="collapse-item " href="{{route('vigep.forms')}}">Formulários</a>
                         <a class="collapse-item " href="{{route('vigep.healthunits')}}">Estabelecimentos</a>
-
+                        <a class="collapse-item " href="{{route('vigep.healthworker')}}">Funcionários</a>
                     </div>
                 </div>
             </li>

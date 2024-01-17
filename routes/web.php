@@ -9,6 +9,7 @@ use App\Http\Controllers\FormsController;
 use App\Http\Controllers\Forms\rabiesCasesController;
 use App\Http\Controllers\Forms\tuberculoseCasesController;
 use App\Http\Controllers\HealthUnitsController;
+use App\Http\Controllers\HealthWorkerController;
 use App\Models\HealthUnits;
 
 /*
@@ -50,6 +51,10 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/healthunits/create', [HealthUnitsController::class, 'create']);
     Route::get('vigep/healthunits/{id}/edit', [HealthUnitsController::class, 'edit']);
     Route::post('vigep/healthunits', [HealthUnitsController::class, 'storeOrUpdateUnits'])->name('vigep.healthunits.storeOrUpdate');
+    /**Funcionários - VIGEP */
+    Route::get('vigep/healthworker', [HealthWorkerController::class, 'index'])->name('vigep.healthworker');
+    Route::get('vigep/healtworker/create', [HealthWorkerController::class, 'create']);
+    Route::post('vigep/healthworker', [HealthWorkerController::class, 'storeOrUpdateUnits'])->name('vigep.healthworker.storeOrUpdate');
     /** Formulários - VIGEP */
     Route::get('vigep', [FormsController::class, 'dashboard'])->name('vigep.index');
     Route::get('vigep/forms', [FormsController::class, 'forms'])->name('vigep.forms');

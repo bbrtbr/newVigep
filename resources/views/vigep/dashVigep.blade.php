@@ -6,8 +6,7 @@
 <body>
     <h2 class="h4 mb-2 text-gray-800">Dashboard</h2>
     <a href="/vigep/forms" class="btn btn-primary">Formulários</a>
-    <a href="/vigep/healthunits" class="btn btn-primary">Estabelecimentos</a>
-
+    <a href="/vigep/healthworker" class="btn btn-primary">Funcionários</a>
     <div class="card-body">
         @include('vigep.cards')
         <div class="search">
