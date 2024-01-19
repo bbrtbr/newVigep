@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cases as ModelsCases;
 use Spatie\Permission\Exceptions\UnauthorizedException;
-use App\Models\Patients, App\Models\Addresses, App\Models\RabiesCases, App\Models\HealthUnits, App\Models\HealthWorkers;
+use App\Models\Patients, App\Models\Addresses, App\Models\Cases\RabiesCases, App\Models\HealthUnits, App\Models\HealthWorkers;
 
 class rabiesCasesController extends Controller
 {

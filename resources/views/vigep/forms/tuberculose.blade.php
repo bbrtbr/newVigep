@@ -1,7 +1,7 @@
 @extends('layouts.layoutForms')
-@section('title','ANTI-RÁBICO')
-@section('typeNotification','ANTI-RÁBICO HUMANO')
-@section('codCidNotification','W - 64')
+@section('title','Tuberculose')
+@section('typeNotification','Tuberculose')
+@section('codCidNotification','A 1 6. 9')
 <form method="POST" action="{{ route('vigep.tuberculoseCases.storeOrUpdate') }}">
     @csrf
     @section('content')
@@ -262,26 +262,5 @@
                 </div>
             </div>
     </div>
-
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="Nome_Inv">Nome</label>
-            <input type="text" name="Nome_Inv" id="Nome_Inv" class="form-control">
-        </div>
-
-        <div class="form-group col-md-6">
-            <label for="Funcao_Inv">Função</label>
-            <input type="text" name="Funcao_Invo" id="Funcao_Inv" class="form-control">
-        </div>
-
-
-    </div>
-
-    </fieldset>
-    <div style="display: flex; justify-content: center;">
-        <input type="submit" value="Enviar" class="btn btn-primary">
-</form>
-</div>
-</div>
-<br>
+   
 @endsection

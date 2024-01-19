@@ -17,12 +17,13 @@
                         <i class="fas fa-search" style="font-size: 1rem; width: 1.5rem;"></i>
                     </span>
                 </div>
-                <input type="text" id="searchInput" class="form-control" style="padding-left: 10px;" placeholder="Pesquisar...">
+                <input type="text" id="searchInput" class="form-control" style="padding-left: 10px;"
+                    placeholder="Pesquisar...">
 
             </div>
         </div>
         <div class="table-responsive" style="margin-top: 20px;">
-            <table class="table table-bordered table-sm" id="dataTableUsers" width="100%" cellspacing="0">
+            <table class="table table-bordered table-sm" id="dataCasesTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Caso</th>
@@ -42,7 +43,10 @@
                         <td>{{ $case->getDate()['healthUnitName'] }}</td>
                         <td>{{ $case->case_status }}</td>
                         <td>{{ $case->getDate()['workerName'] }}</td>
-                        <td><a class="fa fa-edit"></a></td>
+                        <td class="action-icons">
+                            <a  class="fas fa-edit" title="Editar"></a>
+                            <a  class="fas fa-trash" title="Excluir"></a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -55,12 +59,18 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    $(document).ready(function() {
-        $("#searchInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#dataTableUsers tbody tr").filter(function() {
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-            });
+$(document).ready(function() {
+    $("#searchInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#dataCasesTable tbody tr").each(function() {
+            var rowText = $(this).text().toLowerCase();
+            if (rowText.indexOf(value) > -1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
         });
     });
+});
+
 </script>

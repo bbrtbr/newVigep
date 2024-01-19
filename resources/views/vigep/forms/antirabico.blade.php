@@ -504,30 +504,5 @@
 
             </fieldset>
         </div>
-        <hr>
-        <div class="container">
-            <fieldset>
-                <legend style="text-align: center;"><strong>Investigador</strong></legend>
-                <br>
-
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="health_worker_registration">Matrícula</label>
-                        <input type="text" name="health_worker_registration" id="health_worker_registration" class="form-control" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="health_worker_name">Nome</label>
-                        <input type="text" name="health_worker_name" id="health_worker_name" class="form-control" required>
-                    </div>
-                </div>
-        </div>
-
-        </fieldset>
-        </div>
-        <hr>
-        <div style="display: flex; justify-content: center;">
-            <input type="submit" value="Enviar" class="btn btn-primary">
-    </form>
-    </div>
-    <br>
+  
     @endsection

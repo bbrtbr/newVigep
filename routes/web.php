@@ -11,6 +11,7 @@ use App\Http\Controllers\Forms\tuberculoseCasesController;
 use App\Http\Controllers\HealthUnitsController;
 use App\Http\Controllers\HealthWorkerController;
 use App\Models\HealthUnits;
+use App\Http\Controllers\Forms\malariaCasesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,10 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/forms/tuberculose', [tuberculoseCasesController::class, 'index']);
     Route::post('/vigep/rabiescases', [tuberculoseCasesController::class, 'storeOrUpdate'])->name('vigep.tuberculoseCases.storeOrUpdate');
     Route::get('vigep/tuberculose/{id}/edit', [tuberculoseCasesController::class, 'edit']);
+    /** Formulários - Malaria CASES */
+    Route::get('vigep/forms/malaria', [malariaCasesController::class, 'index']);
+    Route::post('/vigep/malaria/storeOrUpdate', [malariaCasesController::class, 'storeOrUpdate'])->name('vigep.malariaCases.storeOrUpdate');
+    Route::get('vigep/malaria/{id}/edit', [malariaCasesController::class, 'edit']);
 });
 
 require __DIR__ . '/auth.php';

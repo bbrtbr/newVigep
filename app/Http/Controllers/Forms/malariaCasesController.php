@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cases as ModelsCases;
 use Spatie\Permission\Exceptions\UnauthorizedException;
-use App\Models\Patients, App\Models\Addresses, App\Models\Cases\TuberculoseCases, App\Models\HealthUnits, App\Models\HealthWorkers;
+use App\Models\Patients, App\Models\Addresses, App\Models\Cases\MalariaCases, App\Models\HealthUnits, App\Models\HealthWorkers;
 
-class tuberculoseCasesController extends Controller
+class malariaCasesController extends Controller
 {
     public function index()
     {
         if (!auth()->user()->hasPermissionTo('Listar todos os formulários - VIGEP')) {
             throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
         }else{
-            $healthUnits = HealthUnits::all();
-        return view('vigep.forms.tuberculose', compact('healthUnits'));
+        $healthUnits = HealthUnits::all();
+        return view('vigep.forms.malaria', compact('healthUnits'));
         }
     }
 
@@ -58,9 +58,9 @@ class tuberculoseCasesController extends Controller
             $case->case_status = 'Análise';
             $case->save();
             $healthWorker->save();
-            $tuberculoseCases = TuberculoseCases::create($request->all());
-            $tuberculoseCases->get_case_id = $case->case_id;
-            $tuberculoseCases->save();
+            $malariaCase = MalariaCases::create($request->all());
+            $malariaCase->get_case_id = $case->case_id;
+            $malariaCase->save();
         }
 
         return redirect('/');
@@ -70,7 +70,7 @@ class tuberculoseCasesController extends Controller
     public function edit($id)
     {
         $case = ModelsCases::findOrFail($id);
-        $tuberculoseCases = TuberculoseCases::where('get_case_id', $id)->first();
-        return view('vigep.forms.tuberculose', compact('case', 'tuberculoseCase'));
+        $malariaCase = MalariaCases::where('get_case_id', $id)->first();
+        return view('vigep.forms.antirabico', compact('case', 'malariaCase'));
     }
 }

@@ -13,4 +13,60 @@
     text-align: center;
     /* Centraliza horizontalmente o texto */
 }
+/* dashboardForms.css */
 
+/* ... Seus estilos existentes ... */
+
+/* Estilos adicionais para a tabela */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.table th {
+    background-color: #4e73df;
+    color: #fff;
+    font-weight: bold;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.fa-edit {
+    color: #28a745;
+    cursor: pointer;
+    height: 100%;
+}
+
+.fa-edit:hover {
+    color: #218838;
+}
+
+.fa-trash {
+    color: #980e23;
+    cursor: pointer;
+    height: 100%;
+}
+
+.fa-trash:hover {
+    color: #980e23;
+}
+.action-icons a {
+    font-size: 1.0rem; /* Ajuste o tamanho conforme necessário */
+    cursor: pointer;
+    margin-right: 10px; /* Ajuste a margem conforme necessário */
+}

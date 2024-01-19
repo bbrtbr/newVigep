@@ -16,6 +16,7 @@
         <div class="btn-container" id="btnContainer">
             <a href="/vigep/forms/tuberculose" class="btn btn-primary">TUBERCULOSE - SINAN</a>
             <a href="/vigep/forms/antirabico" class="btn btn-success">ANTI-RÁBICO HUMANO - SINAN</a>
+            <a href="/vigep/forms/malaria" class="btn btn-warning">MALÁRIA - SINAN</a>
         </div>
     </div>
 
