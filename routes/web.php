@@ -12,7 +12,8 @@ use App\Http\Controllers\HealthUnitsController;
 use App\Http\Controllers\HealthWorkerController;
 use App\Models\HealthUnits;
 use App\Http\Controllers\Forms\malariaCasesController;
-
+use App\Http\Controllers\Forms\violenceCasesController;
+use App\Http\Controllers\Forms\influenzaCasesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,6 +73,14 @@ Route::middleware('auth')->group(function () {
     Route::get('vigep/forms/malaria', [malariaCasesController::class, 'index']);
     Route::post('/vigep/malaria/storeOrUpdate', [malariaCasesController::class, 'storeOrUpdate'])->name('vigep.malariaCases.storeOrUpdate');
     Route::get('vigep/malaria/{id}/edit', [malariaCasesController::class, 'edit']);
+    /** Formulários - Violence CASES */
+    Route::get('vigep/forms/violence', [violenceCasesController::class, 'index']);
+    Route::post('/vigep/violence/storeOrUpdate', [violenceCasesController::class, 'storeOrUpdate'])->name('vigep.violenceCases.storeOrUpdate');
+    Route::get('vigep/violence/{id}/edit', [violenceCasesController::class, 'edit']);
+    /** Formulários - Influenza CASES */
+    Route::get('vigep/forms/influenza', [influenzaCasesController::class, 'index']);
+    Route::post('/vigep/influenza/storeOrUpdate', [influenzaCasesController::class, 'storeOrUpdate'])->name('vigep.influenzaCases.storeOrUpdate');
+    Route::get('vigep/influenza/{id}/edit', [influenzaCasesController::class, 'edit']);
 });
 
 require __DIR__ . '/auth.php';

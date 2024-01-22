@@ -1,7 +1,7 @@
 
 .btn-container {
     display: flex;
-    flex-wrap: wrap;/* Para que os botões quebrem para a próxima linha quando não couberem mais na largura da tela */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -11,13 +11,9 @@
 
 .text-center {
     text-align: center;
-    /* Centraliza horizontalmente o texto */
+    
 }
-/* dashboardForms.css */
 
-/* ... Seus estilos existentes ... */
-
-/* Estilos adicionais para a tabela */
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -66,7 +62,9 @@
     color: #980e23;
 }
 .action-icons a {
-    font-size: 1.0rem; /* Ajuste o tamanho conforme necessário */
+    font-size: 1.0rem; 
     cursor: pointer;
-    margin-right: 10px; /* Ajuste a margem conforme necessário */
+    margin-right: 10px; 
 }
+
+
