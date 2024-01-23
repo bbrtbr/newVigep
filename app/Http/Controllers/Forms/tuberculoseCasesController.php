@@ -12,12 +12,10 @@ class tuberculoseCasesController extends Controller
 {
     public function index()
     {
-        if (!auth()->user()->hasPermissionTo('Listar todos os formulários - VIGEP')) {
-            throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
-        }else{
+       
             $healthUnits = HealthUnits::all();
-        return view('vigep.forms.tuberculose', compact('healthUnits'));
-        }
+        return view('vigep.forms.tuberculose', compact('healthUnits','healthWorkers'));
+        
     }
 
     public function storeOrUpdate(Request $request)

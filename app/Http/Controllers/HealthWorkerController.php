@@ -26,15 +26,15 @@ class HealthWorkerController extends Controller
     public function create()
     {
 
-        return view('vigep.healthworker.createOrEdit');
+        return view('vigep.healthworkers.createOrEdit');
     }
     public function edit($id)
     {
         $case = HealthWorkers::findOrFail($id);
 
-        return view('vigep.healthworker.createOrEdit', compact('case'));
+        return view('vigep.healthworkers.createOrEdit', compact('case'));
     }
-    public function storeOrUpdateUnits(Request $request)
+    public function storeOrUpdate(Request $request)
     {
         if ($request->has('health_unit_id')) {
 

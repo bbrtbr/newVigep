@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Database\Seeders\PermissionsTableSeeder;
 use Illuminate\Http\Request;
-
+use App\Models\User;
 use Spatie\Permission\Exceptions\UnauthorizedException;
 use App\Models\Addresses, App\Models\HealthUnits;
 
@@ -43,7 +43,17 @@ class HealthUnitsController extends Controller
             $healthUnits->update($request->all());
         } else {
             $healthUnits = HealthUnits::create($request->all());
+           $user = User::create([
+                'user_name' => $healthUnits->health_unit_name,
+                'email' => $healthUnits->health_unit_email,
+                'password' => $request->input('health_unit_password'),
+                'user_status' => true,
+            ]);
 
+            $permissionsSeeder = new PermissionsTableSeeder();
+
+            $permissionsSeeder->createUnit($healthUnits->health_unit_name);
+            $user->assignRole($healthUnits->health_unit_name);
             $healthUnits->save();
         }
         return redirect('/');

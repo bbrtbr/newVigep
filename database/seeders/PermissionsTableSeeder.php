@@ -1,5 +1,4 @@
 <?php
-
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -14,11 +13,16 @@ class PermissionsTableSeeder extends Seeder
     /**
      * Run the database seeds.
      */
+    public function createUnit($nameUnit)
+    {   
+        $role = Role::create(['name' => $nameUnit]);
+    }
+    
     public function run(): void
     {
         DB::table('permissions')->delete();
         //ConfiguraçõesUsuários - OK
-        Permission::create(['name' => 'Cadastrar Usuário','group' => 'Usuários']);
+        Permission::create(['name' => 'Cadastrar Usuário', 'group' => 'Usuários']);
         Permission::create(['name' => 'Editar Usuário', 'group' => 'Usuários']);
         Permission::create(['name' => 'Excluir Usuário', 'group' => 'Usuários']);
         Permission::create(['name' => 'Listar Usuários', 'group' => 'Usuários']);
@@ -30,12 +34,12 @@ class PermissionsTableSeeder extends Seeder
         Permission::create(['name' => 'Excluir Perfil de Usuário', 'group' => 'Perfis de Usuário']);
         Permission::create(['name' => 'Listar Perfis de Usuário', 'group' => 'Perfis de Usuário']);
         Permission::create(['name' => 'Associar Permissões ao Perfil de Usuário', 'group' => 'Perfis de Usuário']);
-        
+
         //Permissões VIGEP
         Permission::create(['name' => 'Listar todos os formulários - VIGEP', 'group' => 'VIGEP']);
 
         $role = Role::create(['name' => 'Super Admin']);
-        $user = User::where('id',1)->first();
+        $user = User::where('id', 1)->first();
         $user->assignRole('Super Admin');
 
     }

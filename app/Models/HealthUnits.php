@@ -14,6 +14,7 @@ class HealthUnits extends Model
 
     protected $fillable = [
         'health_unit_name',
-        'health_unit_code'
+        'health_unit_code',
+        'health_unit_email'
     ];
 }

@@ -12,12 +12,11 @@ class rabiesCasesController extends Controller
 {
     public function index()
     {
-        if (!auth()->user()->hasPermissionTo('Listar todos os formulários - VIGEP')) {
-            throw new UnauthorizedException('403', 'Oops! Você não tem a autorização necessária.');
-        }else{
+     
         $healthUnits = HealthUnits::all();
-        return view('vigep.forms.antirabico', compact('healthUnits'));
-        }
+        $healthWorkers = HealthWorkers::all();
+        return view('vigep.forms.antirabico', compact('healthUnits','healthWorkers'));
+        
     }
 
     public function storeOrUpdate(Request $request)

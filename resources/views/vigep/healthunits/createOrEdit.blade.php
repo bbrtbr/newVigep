@@ -6,15 +6,19 @@
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="health_unit_name">Nome</label>
-            <input type="text"  name="health_worker_name" id="health_worker_name" class="form-control">
+            <input type="text"  name="health_unit_name" id="health_unit_name" class="form-control">
         </div>
         <div class="form-group col-md-4">
             <label for="health_unit_name">Código</label>
-            <input  type="text" name="health_worker_code" id="health_worker_code" class="form-control">
+            <input  type="text" name="health_unit_code" id="health_unit_code" class="form-control">
         </div>
         <div class="form-group col-md-4">
-
-
+            <label for="health_unit_name">Email</label>
+            <input  type="text" name="health_unit_email" id="health_unit_email" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="health_unit_name">Senha</label>
+            <input  type="text" name="health_unit_password" id="health_unit_password" class="form-control">
         </div>
         <button type="submit" class="btn btn-warning">Adicionar</button>
     </div>

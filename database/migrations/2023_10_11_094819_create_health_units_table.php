@@ -11,6 +11,7 @@ class CreateHealthUnitsTable extends Migration
         Schema::create('health_units', function (Blueprint $table) {
             $table->id('health_unit_id');
             $table->string('health_unit_name', 255)->nullable();
+            $table->string('health_unit_email', 255)->nullable();
             $table->string('health_unit_code', 45)->nullable();
             $table->unsignedBigInteger('get_address_id')->nullable();
 

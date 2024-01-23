@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function () {
     /**Funcionários - VIGEP */
     Route::get('vigep/healthworker', [HealthWorkerController::class, 'index'])->name('vigep.healthworker');
     Route::get('vigep/healtworker/create', [HealthWorkerController::class, 'create']);
-    Route::post('vigep/healthworker', [HealthWorkerController::class, 'storeOrUpdateUnits'])->name('vigep.healthworker.storeOrUpdate');
+    Route::post('vigep/healthworker', [HealthWorkerController::class, 'storeOrUpdate'])->name('vigep.healthworkers.storeOrUpdate');
     /** Formulários - VIGEP */
     Route::get('vigep', [FormsController::class, 'dashboard'])->name('vigep.index');
     Route::get('vigep/forms', [FormsController::class, 'forms'])->name('vigep.forms');

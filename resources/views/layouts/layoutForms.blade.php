@@ -13,13 +13,17 @@
     <title>Programa Eficiência @yield('title')</title>
 
     <!-- Custom fonts for this template-->
-    <link href="{{ asset('build/assets/sb-admin-2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{{ asset('build/assets/sb-admin-2/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"
+        type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('build/assets/sb-admin-2/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <!-- Custom styles for Datatables -->
-    <link href="{{ asset('build/assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('build/assets/sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.css') }}"
+        rel="stylesheet">
     <!-- Custom styles for this Select2-->
     <link href="{{ asset('build/assets/sb-admin-2/vendor/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('build/assets/sb-admin-2/vendor/select2/css/select2-bootstrap4.min.css') }}" rel="stylesheet">
@@ -38,7 +42,8 @@
     <p style="text-align: center;">SISTEMA DE INFORMAÇÃO DE AGRAVOS DE NOTIFICAÇÃO</p>
     <div class="container">
         <div class="form-group col-md-3">
-            <input type="number" name="N°" id="N°" class="form-control" placeholder="N°" style="background-color: rgb(212, 209, 214);">
+            <input type="number" name="N°" id="N°" class="form-control" placeholder="N°"
+                style="background-color: rgb(212, 209, 214);">
         </div>
 
     </div>
@@ -59,12 +64,14 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="case_disease">2 - Agravo/Doença</label>
-                    <input value="@yield('typeNotification')" type="text" name="case_disease" id="case_disease" class="form-control">
+                    <input value="@yield('typeNotification')" type="text" name="case_disease" id="case_disease"
+                        class="form-control">
                 </div>
 
                 <div class="form-group col-md-3">
                     <label for="case_cid">Código (CID)</label>
-                    <input type="text" value="@yield('codCidNotification')" name="case_cid" id="case_cid" class="form-control">
+                    <input type="text" value="@yield('codCidNotification')" name="case_cid" id="case_cid"
+                        class="form-control">
                 </div>
 
                 <div class="form-group col-md-3">
@@ -99,7 +106,8 @@
                         <select id="health_unit_name" name="health_unit_name" class="form-control">
                             <option value="" disabled selected>Selecione uma opção</option>
                             @foreach ($healthUnits as $unit)
-                            <option value="{{ $unit->health_unit_name }}" data-code="{{ $unit->health_unit_code }}">{{ $unit->health_unit_name }}</option>
+                            <option value="{{ $unit->health_unit_name }}" data-code="{{ $unit->health_unit_code }}">{{
+                                $unit->health_unit_name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -124,7 +132,8 @@
             <br>
             <div class="form-group">
                 <label for="patient_cpf">CPF</label>
-                <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf" class="form-control" required>
+                <input onkeyup="formatNumberCPF(this)" type="text" name="patient_cpf" id="patient_cpf"
+                    class="form-control" required>
             </div>
             <div class="form-row">
 
@@ -261,7 +270,8 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="address_address_complement">23 - Complemento</label>
-                    <input type="text" name="address_address_complement" id="address_address_complement" class="form-control">
+                    <input type="text" name="address_address_complement" id="address_address_complement"
+                        class="form-control">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="address_geofield1">24 - Geo campo 1</label>
@@ -275,7 +285,8 @@
                 </div>
                 <div class="form-group col-md-5">
                     <label for="address_address_reference">26 - Ponto de Referência</label>
-                    <input type="text" name="address_address_reference" id="address_address_reference" class="form-control">
+                    <input type="text" name="address_address_reference" id="address_address_reference"
+                        class="form-control">
                 </div>
                 <div class="form-group col-md-3">
                     <label for="address_cep">27 - CEP</label>
@@ -285,7 +296,8 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="address_phone">28 - (DDD) Telefone</label>
-                    <input onkeyup="formatPhoneNumber(this)" type="text" name="address_phone" id="address_phone" class="form-control">
+                    <input onkeyup="formatPhoneNumber(this)" type="text" name="address_phone" id="address_phone"
+                        class="form-control">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="address_zone">29 - Zona</label>
@@ -308,29 +320,44 @@
 
     @yield('content')
     <hr>
-        <div class="container">
-            <fieldset>
-                <legend style="text-align: center;"><strong>Investigador</strong></legend>
-                <br>
+    <div class="container">
+        <fieldset>
+            <legend style="text-align: center;"><strong>Investigador</strong></legend>
+            <br>
 
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="health_worker_registration">Matrícula</label>
-                        <input type="text" name="health_worker_registration" id="health_worker_registration" class="form-control" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="health_worker_name">Nome</label>
-                        <input type="text" name="health_worker_name" id="health_worker_name" class="form-control" required>
-                    </div>
+            <div class="form-row">
+
+                <label for="health_worker_name">Nome</label>
+                <div class="input-group">
+                    <select id="health_worker_name" name="health_worker_name" class="form-control">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        @foreach ($healthWorkers as $work)
+                        <option value="{{ $work->health_worker_name }}" data-code="{{ $work->health_worker_registration }}">{{
+                            $work->health_worker_name }}</option>
+                        @endforeach
+                    </select>
                 </div>
-        </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="health_worker_registration">Código</label>
+                <input disabled type="text" id="health_worker_registration" name="health_worker_registration" class="form-control">
+            </div>
 
-        </fieldset>
-        </div>
-        <hr>
-        <div style="display: flex; justify-content: center;">
-            <input type="submit" value="Enviar" class="btn btn-primary">
-    </form>
+
+
+
+
+
+
+    </div>
+    </div>
+
+    </fieldset>
+    </div>
+    <hr>
+    <div style="display: flex; justify-content: center;">
+        <input type="submit" value="Enviar" class="btn btn-primary">
+        </form>
     </div>
     <br>
 </body>
@@ -341,5 +368,5 @@
 <script src="{{ asset('js/scriptForms/formatNumberCPF.js') }}"></script>
 <script src="{{ asset('js/scriptForms/verifyPacient.js') }}"></script>
 <script src="{{ asset('js/scriptForms/getCodeHealthUnit.js') }}"></script>
-
+<script src="{{ asset('js/scriptForms/getCodeHealthWorker.js') }}"></script>
 </html>
