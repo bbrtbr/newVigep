@@ -115,7 +115,7 @@ class CreateViolenceCasesTable extends Migration
             $table->string('violence_case_end_work_accident', 20)->nullable();
             $table->string('violence_case_end_injury', 100)->nullable();
             $table->date('violence_case_end_date')->nullable();
-            $table->integer('get_case_id')->nullable();
+            $table->unsignedBigInteger('get_case_id')->nullable();
             $table->timestamps();
 
           
