@@ -15,6 +15,6 @@ class HealthWorkers extends Model
         'health_worker_name',
         'health_unit_code',
         'health_worker_function',
-        'health_worker_registration'
+        'health_worker_registration',
     ];
 }

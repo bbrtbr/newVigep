@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use Spatie\Permission\Exceptions\UnauthorizedException;
-use App\Models\Addresses, App\Models\HealthWorkers;
+use App\Models\Addresses, App\Models\HealthWorkers, App\Models\HealthUnits;
 
 class HealthWorkerController extends Controller
 {
@@ -25,8 +25,8 @@ class HealthWorkerController extends Controller
     }
     public function create()
     {
-
-        return view('vigep.healthworkers.createOrEdit');
+        $healthUnits = HealthUnits::all();
+        return view('vigep.healthworkers.createOrEdit', compact('healthUnits'));
     }
     public function edit($id)
     {
@@ -42,7 +42,6 @@ class HealthWorkerController extends Controller
             $healthWork->update($request->all());
         } else {
             $healthWork = HealthWorkers::create($request->all());
-
             $healthWork->save();
         }
         return redirect('/');

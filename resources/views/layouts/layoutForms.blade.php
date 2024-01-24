@@ -113,7 +113,7 @@
                     </div>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="unitCode">Código</label>
+                    <label for="health_unit_code">Código</label>
                     <input disabled type="text" id="health_unit_code" name="health_unit_code" class="form-control">
                 </div>
                 <div class="form-group col-md-3">

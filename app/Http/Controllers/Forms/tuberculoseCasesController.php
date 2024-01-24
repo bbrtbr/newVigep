@@ -43,13 +43,13 @@ class tuberculoseCasesController extends Controller
             $patient->get_address_id = $addresses->address_id;
             $patient->save();
 
-            $healthUnit = HealthUnits::create($request->all());
+           
 
             //$healthWorker = HealthWorkers::create($request->all());
 
             $case = ModelsCases::create($request->all());
             $case->get_health_worker_id = $healthWorker->health_worker_id;
-            $case->get_health_unit_id = $healthUnit->health_unit_id;
+            $case->get_health_unit_id = $request->input('health_unit_code');
             $case->get_patient_id = $patient->patient_id;
             $case->get_address_id = $addresses->address_id;
             $case->get_patient_id = $patient->patient_id;

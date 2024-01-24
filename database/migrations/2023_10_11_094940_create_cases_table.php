@@ -29,7 +29,7 @@
                     ->onUpdate('NO ACTION')
                     ->onDelete('NO ACTION');
 
-                $table->foreign('get_health_unit_id')->references('health_unit_id')->on('health_units')
+                $table->foreign('get_health_unit_id')->references('health_unit_code')->on('health_units')
                     ->onUpdate('NO ACTION')
                     ->onDelete('NO ACTION');
 
