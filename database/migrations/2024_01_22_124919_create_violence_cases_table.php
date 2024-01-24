@@ -118,7 +118,7 @@ class CreateViolenceCasesTable extends Migration
             $table->integer('get_case_id')->nullable();
             $table->timestamps();
 
-            $table->index('get_case_id');
+          
             $table->foreign('get_case_id')->references('case_id')->on('cases')->onDelete('NO ACTION')->onUpdate('NO ACTION');
         });
     }
