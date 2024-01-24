@@ -29,8 +29,8 @@ class FormsController extends Controller
             return view('vigep.dashVigep', ['patients' => $patients, 'cases' => $cases, 'casesCount' => $casesCount, 'patientsCount' => $patientsCount]);
         } else if ($roles) {
             $healthUnit = HealthUnits::where('health_unit_name', $roles)->first();
-            $casesUnic = ModelsCases::where('get_health_unit_id', $healthUnit->health_unit_id)->paginate(10);
-            $casesUnicCount = ModelsCases::where('get_health_unit_id', $healthUnit->health_unit_id)->count();
+            $casesUnic = ModelsCases::where('health_unit_code', $healthUnit->health_unit_code)->paginate(10);
+            $casesUnicCount = ModelsCases::where('health_unit_code', $healthUnit->health_unit_code)->count();
             $patientIds = $casesUnic->pluck('get_patient_id')->toArray();
             $patientsCountUnic = Patients::whereIn('patient_id', $patientIds)->count();
             return view('vigep.dashVigep', [
