@@ -18,7 +18,7 @@
                 $table->date('case_attendance_date')->nullable();
                 $table->unsignedBigInteger('get_patient_id')->nullable();
                 $table->unsignedBigInteger('get_health_worker_id')->nullable();
-                $table->unsignedBigInteger('get_health_unit_id')->nullable();
+                $table->string('health_unit_code',255)->nullable();
                 $table->unsignedBigInteger('get_address_id')->nullable();
 
                 $table->foreign('get_patient_id')->references('patient_id')->on('patients')
@@ -29,7 +29,7 @@
                     ->onUpdate('NO ACTION')
                     ->onDelete('NO ACTION');
 
-                $table->foreign('get_health_unit_id')->references('health_unit_code')->on('health_units')
+                    $table->foreign('health_unit_code')->references('health_unit_code')->on('health_units')
                     ->onUpdate('NO ACTION')
                     ->onDelete('NO ACTION');
 
