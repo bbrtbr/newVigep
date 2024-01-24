@@ -14,7 +14,7 @@ class CreateHealthWorkersTable extends Migration
             $table->string('health_worker_name', 255)->nullable();
             $table->string('health_worker_registration', 255)->nullable(); 
             $table->string('health_worker_function', 255)->nullable();
-          
+            $table->unsignedBigInteger('health_unit_code')->nullable();
             $table->foreign('health_unit_code')->references('health_unit_code')->on('health_units')
                 ->onUpdate('NO ACTION')
                 ->onDelete('NO ACTION');
